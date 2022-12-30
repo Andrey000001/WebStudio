@@ -1,0 +1,55 @@
+.cards-addition {
+    @extend %container;
+    padding-bottom: 94px;    
+
+    &__subtitle {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 50px;
+      
+        font-family: $font-roboto;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.1666;
+        letter-spacing: 0.03em;
+      
+        color: #212121;
+    }
+}
+.list-product {
+    display: flex;
+    margin-top: 0;
+    gap: 30px;
+    
+    &__item {
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item::before {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      
+        content: "";
+        width: 100%;
+        height: 70px;
+      
+        background: rgba(47, 48, 58, 0.8);
+    }
+
+    &__text {
+        position: absolute;
+        bottom: 27px;
+
+        font-family: $font-roboto;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: $letter-spacing;
+
+        color: $color-backround;
+    }
+}

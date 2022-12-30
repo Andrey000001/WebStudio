@@ -1,0 +1,56 @@
+.footer-button {
+    margin-left: 93px; 
+}
+
+.button-content {
+    display: flex;
+    gap: 10px;
+
+    &__input {
+        font-family: $font-roboto;
+        font-size: 16px;
+        line-height: 20px;
+        font-size: 16px;
+        letter-spacing: 0.03em;
+    
+        width: 358px;
+        height: 50px;
+        padding-left: 16px;
+    
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+    
+        color: rgba(255, 255, 255, 0.6);
+        background-color: #2F303A; 
+    
+        outline: none;
+    }
+    &__butt {
+        width: 200px;
+        height: 50px;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        border-radius: 4px;
+        background: #2196F3;
+        border-color: transparent;
+    
+        font-family: 'Roboto';
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.875;
+        letter-spacing: 0.06em;
+    
+        cursor:pointer;
+    
+        color: $color-backround;
+    }
+
+    &__icon {
+        margin-left: 10px;
+
+        fill: $color-backround;
+    }
+}

@@ -1,0 +1,168 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__field {
+        position: relative;
+    }
+
+    &__field:nth-child(n) {
+        margin-bottom: 28px;
+    }
+
+    &__input {
+        padding-left: 30px;
+        width: 448px;
+        height: 40px;
+        
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        
+        transition: outline-color 300ms;
+    }
+
+    &__input:focus {
+        outline-color: $color-hover;
+    }
+
+    .form__input:focus + .form__label,
+    .form__input:not(:placeholder-shown) + .form__label {
+        transform: translate(-30px, -40px);
+        transition: transform 300ms, color 250ms;
+
+        color: $color-hover;
+    }
+
+    &__input ~ &__icon {
+        fill: #212121;
+    }
+
+    &__input:focus ~ &__icon {
+        fill: $color-hover;
+    }
+
+    &__label {
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        
+        font-family: 'Roboto';
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+        
+        color: #757575;
+        
+        transform: translateY(-50%);
+    }
+    &__icon {
+        position: absolute;
+        left: 5px;
+        top: 50%;
+        
+        width: 18px;
+        height: 18px;
+        
+        transform: translateY(-50%);
+        transition: fill 250ms;
+    }
+    &__textarea-content {
+        position: relative;
+        margin-bottom: 20px;
+    }
+    &__textarea {
+        width: 448px;
+        height: 120px;
+        padding: 12px 16px;
+        
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        
+        font-family: "Roboto";
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+        
+        color: rgba(117, 117, 117, 0.5);
+        
+        resize: none;
+        transition: outline-color 300ms;
+    }
+
+    &__commentar {
+        position: absolute;
+        left: 24px;
+        top: 50px;
+        
+        font-family: "Roboto";
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+        
+        color: #757575;
+        
+        transform: scale(0);
+        transition: transform 300ms;
+    }
+
+    &__policy {
+        display: flex;
+        align-items: center;
+        
+        font-family: "Roboto";
+        font-size: 14px;
+        line-height: 1.714;
+        letter-spacing: 0.03em;
+        
+        color: #757575;
+    }
+
+    &__checkbox {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    &__icon-checkbox {
+        width: 18px;
+        height: 18px;
+        margin-right: 7px;
+        
+        border-radius: 4px;
+        border: 2px solid #000;
+
+        transition: transform 300ms;
+    }
+
+    .form__checkbox:checked:focus ~ .form__icon-checkbox {
+        background-image: url(../images/icon/svg/jackdaw.svg);
+      
+        background-size: contain;
+        background-position: center;
+        background-origin: border-box;
+      
+        border-color: $color-hover;
+        background-color: $color-hover;
+      
+        transform: scale(1.1);
+      }
+        
+    &__textarea:focus + &__commentar,
+    &__textarea:not(:placeholder-shown) + &__commentar {
+        transform: translate(-24px, -70px);
+        transition: color 250ms;
+
+        color: $color-hover;
+    }
+
+    &__textarea:focus {
+        outline-color: $color-hover;
+    }
+}
+
+.policy-text {
+    color: $color-hover;
+}
+

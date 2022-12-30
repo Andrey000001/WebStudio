@@ -1,0 +1,23 @@
+.nav {
+    display: flex;
+    align-items: center;
+    
+    &__link {
+        font-family: $font-raleway;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.19;
+        letter-spacing: $letter-spacing;
+      
+        color: $color-hover;
+        text-decoration: none;
+      
+        padding-top: 24px;
+        padding-bottom: 25px;
+        margin-right: 93px;
+    }
+
+    &__studio {
+        color: #000;
+    }
+}

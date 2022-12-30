@@ -1,0 +1,43 @@
+// Переменные
+@import './abstracts/variables';
+
+// Нормализация Стилей
+@import './vendors/normalize';
+
+// Шрифты
+@import './vendors/font-family';
+
+// Обнулинеие 
+@import './abstracts/utilits';
+
+// Placeholders 
+@import './abstracts/placeholders';
+
+//  Mixin
+@import './abstracts/mixin';
+
+// Component
+// Page header 
+@import './component/page-header';
+@import './component/navigation';
+@import './component/list_navigation';
+@import './component/nav_contacts';
+
+// main
+@import './component/overlay';
+@import './component/cards-skills';
+@import './component/technique';
+@import './component/cards-team';
+@import './component/groups-card';
+
+// Footer
+@import './component/footer-contacs';
+@import './component/footer-join';
+@import './component/footer-send';
+
+// Modal
+@import './component/modal';
+@import './component/modal-form';
+@import './component/modal-butt';
+
+

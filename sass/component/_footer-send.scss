@@ -1,0 +1,67 @@
+.subscribe {
+    margin-left: 93px;
+
+    &__text {
+        display: block;
+        margin-bottom: 20px;
+      
+        font-family: $font-roboto;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+      
+        color: $color-backround;
+    }
+}
+.button-join {
+    display: flex;
+    gap: 10px;
+    &__input {
+        font-family: $font-roboto;
+        font-size: 16px;
+        line-height: 20px;
+        font-size: 16px;
+        letter-spacing: 0.03em;
+      
+        width: 358px;
+        height: 50px;
+        padding-left: 16px;
+      
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+      
+        color: rgba(255, 255, 255, 0.6);
+        background-color: #2f303a;
+      
+        outline: none;
+    }
+}
+.button-footer {
+    width: 200px;
+    height: 50px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    border-radius: 4px;
+    background: $color-hover;
+    border-color: transparent;
+  
+    font-family: $font-roboto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+  
+    cursor: pointer;
+  
+    color: $color-backround;
+
+    &__icon {
+        fill: $color-backround;
+
+        margin-left: 10px;
+    }
+}

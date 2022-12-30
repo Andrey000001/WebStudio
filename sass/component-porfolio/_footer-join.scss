@@ -1,0 +1,38 @@
+.subtitle {
+    margin-bottom: 20px;
+
+    font-family: $font-roboto;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.1428;
+    letter-spacing: 0.03em;
+
+    color: $color-backround;
+}
+
+.social_network {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    
+    &__link {
+        @include centeredFlex(flex);
+        width: 44px;
+        height: 44px;
+
+        border-radius: 50%;
+        background-color: #FFFFFF1A;
+    
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__link:hover ,
+    &__link:hover {
+        background-color: $color-hover;
+    }
+
+    &__icon {
+        fill: $color-backround;
+    }
+}
+

@@ -1,0 +1,32 @@
+// Переменные
+@import "./abstracts/variables";
+// Нормализация Стилей
+@import "./vendors/normalize";
+// Шрифты
+@import "./vendors/font-family";
+// Обнулинеие 
+@import "./abstracts/utilits";
+// Placeholders 
+@import "./abstracts/placeholders";
+//  Mixin
+@import "./abstracts/mixin";
+
+
+// Component-Porfolio
+// Page header
+@import './component-porfolio/page-header';
+@import './component-porfolio/page-heder-nav';
+
+// Main (btn)
+@import './component-porfolio/buttons';
+
+// Main (content)
+@import './component-porfolio/main';
+@import './component-porfolio/main-set';
+@import './component-porfolio/main-text';
+
+// FOOTER
+@import './component-porfolio/footer';
+@import './component-porfolio/footer-contacts';
+@import './component-porfolio/footer-join';
+@import './component-porfolio/footer-input';
