@@ -1,5 +1,15 @@
 .list {
-    @include list(flex);
+    display: none;
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+        @include list(flex);
+        margin-left: 88px;
+        gap: 50px;
+
+    }
 
     &__link {
         position: relative;
@@ -40,6 +50,6 @@
     }
 
     &__item + &__item {
-        margin-left: 50px;
+        // margin-left: 50px;
     }
 }

@@ -1,5 +1,10 @@
 .subscribe {
-    margin-left: 93px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: 1200px) {
+        align-items: flex-start;
+    }
 
     &__text {
         display: block;
@@ -16,7 +21,16 @@
 }
 .button-join {
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+
+    align-items: center;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        gap: 12px;
+    }
+   
     &__input {
         font-family: $font-roboto;
         font-size: 16px;
@@ -24,9 +38,9 @@
         font-size: 16px;
         letter-spacing: 0.03em;
       
-        width: 358px;
+        width: 450px;
         height: 50px;
-        padding-left: 16px;
+        margin-bottom: 20px;
       
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 4px;
@@ -35,6 +49,10 @@
         background-color: #2f303a;
       
         outline: none;
+        @media screen and (min-width: 1200px) {
+            width: 100%;
+        }
+       
     }
 }
 .button-footer {

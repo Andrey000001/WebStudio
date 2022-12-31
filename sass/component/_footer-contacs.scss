@@ -1,17 +1,41 @@
 .footer {
     background-color: #2f303a;
-    width: 100%;
-    height: 252px;
+    // width: 100%;
+    // height: 252px;
 }
 .footer-contain {
-    display: flex;
-    @extend %container;
-
     padding-top: 60px;
     padding-bottom: 60px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1200px) {
+        margin: 0;
+        flex-wrap: nowrap;
+    }
+    
 }
 .contact-information {
-    margin-right: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    @media screen and (min-width:768px) {
+        margin-right: 165px;
+    }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        align-items: flex-start;
+        margin: 0 165px 0 0;
+    }
 
     &__link {
         font-family: "Raleway";
@@ -25,13 +49,14 @@
       
         display: inline-block;
         margin-bottom: 20px;
+        
     }
     &__web {
         color: $color-backround;
     }
 
     &__streat {
-        margin-bottom: 9px;
+        margin-bottom: 12px;
 
         font-family: $font-roboto;
         font-style: normal;
@@ -60,7 +85,8 @@
     &__tel:hover {
         color: $color-hover;
     }
+
     &__mail {
-        margin-bottom: 9px;
+        margin-bottom: 12px;
     }
 }

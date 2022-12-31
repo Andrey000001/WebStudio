@@ -1,18 +1,47 @@
 .cards {
-    padding-top: 94px;
-    padding-bottom: 94px;
-    @extend %container;
+    padding: 60px 0;
+
+    @media screen and (min-width: 1200px) {
+        padding: 94px 0;
+    }
 }
 
 .list-skills {
-    @extend %list;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 30px;
+    }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        gap: 30px;
+    }
+    // @extend %list;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+
+    &__item {
+        max-width: 354px;
+        margin-bottom: 30px;
+       @media screen and (min-width:768px) {
+            margin: 0;
+       }
+       @media screen and (min-width: 1200px) {
+            margin: 0;
+       }
+    }
 
     &__item::before {
         display: block;
         content: "";
-        margin: 0 auto;
+
+        margin-bottom: 30px;
         height: 120px;
-        width: 270px;
       
         background-repeat: no-repeat;
         background-position: center;
@@ -23,7 +52,12 @@
     }
 
     &__item + &__item {
-        margin-left: 30px;
+        // margin-left: 30px;
+    }
+    
+
+    &__item:last-child {
+        margin-bottom: 0;
     }
     
     &--antenna::before {
@@ -48,7 +82,9 @@
     }
 
     &__logo {
-        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        // margin-top: 30px;
         margin-bottom: 10px;
 
         font-family: $font-roboto;
