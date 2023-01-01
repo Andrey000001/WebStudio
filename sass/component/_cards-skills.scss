@@ -7,37 +7,43 @@
 }
 
 .list-skills {
-    @media screen and (min-width: 768px) {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        gap: 30px;
-    }
-    @media screen and (min-width: 1200px) {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: flex-start;
-        gap: 30px;
-    }
     display: flex;
     flex-direction: column;
     align-items: center;
     list-style: none;
 
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        gap: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+
+        gap: 30px;
+    }
+
     &__item {
         max-width: 354px;
         margin-bottom: 30px;
+
        @media screen and (min-width:768px) {
             margin: 0;
        }
+
        @media screen and (min-width: 1200px) {
             margin: 0;
        }
     }
 
     &__item::before {
-        display: block;
         content: "";
+        display: block;
 
         margin-bottom: 30px;
         height: 120px;
@@ -49,11 +55,6 @@
         background-color: #f5f4fa;
         border-radius: 4px;
     }
-
-    &__item + &__item {
-        // margin-left: 30px;
-    }
-    
 
     &__item:last-child {
         margin-bottom: 0;
@@ -83,7 +84,6 @@
     &__logo {
         display: flex;
         justify-content: center;
-        // margin-top: 30px;
         margin-bottom: 10px;
 
         font-family: $font-roboto;

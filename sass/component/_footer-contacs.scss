@@ -15,25 +15,28 @@
         justify-content: center;
         flex-wrap: wrap;
     }
-  
-    
 }
+
 .contact-information {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 60px;
+
     @media screen and (min-width:768px) {
         margin-right: 165px;
     }
+
     @media screen and (min-width: 1200px) {
-        margin: 0;
         align-items: flex-start;
-        margin-right: 93px;
+        margin: 0 93px 0 0;
     }
     
 
     &__link {
+        display: inline-block;
+        margin-bottom: 20px;
+
         font-family: "Raleway";
         font-weight: 700;
         font-size: 26px;
@@ -42,11 +45,8 @@
       
         color: $color-hover;
         text-decoration: none;
-      
-        display: inline-block;
-        margin-bottom: 20px;
-        
     }
+    
     &__web {
         color: $color-backround;
     }
