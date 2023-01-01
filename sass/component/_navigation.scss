@@ -20,3 +20,44 @@
         color: #000;
     }
 }
+
+.menu_button {
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+    display: inline-block;
+    margin: 0 0 0 auto;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    & .icon-close {
+        display: none;
+    }
+    &.is-open .icon-close {
+        display: block;
+    }
+    &.is-open .icon-menu {
+        display: none;
+    }
+   
+}
+.menu-contain {
+    display: none;
+
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    height: 200px;
+    width: 100%;
+    
+    border-radius: 4px;
+    background-color: #757575;
+
+    &.is-open {
+        display: block;
+    }
+    
+}

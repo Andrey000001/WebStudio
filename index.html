@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="uk">
   <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <!--header!!!!-->
@@ -17,6 +17,31 @@
           <a class="nav__link" href="/index.html"
             >Web<span class="nav__studio">Studio</span></a
           >
+          <button type="button" class="menu_button is-open" data-menu-button>
+            <svg
+              width="24"
+              height="16"
+              aria-expanded="false"
+              aria-label="Переключатель мобильного меню"
+              aria-controls="menu-contain"
+            >
+              <use
+                class="icon-menu"
+                href="./images/icon/symbol-defs_2.svg#icon-menu_24px"
+              ></use>
+              <use
+                class="icon-close"
+                href="./images/icon/symbol-defs_2.svg#icon-close"
+              ></use>
+            </svg>
+          </button>
+          <div class="menu-contain" id="menu-contain" data-menu>
+            <a href="#">Студія</a>
+            <a href="#">Порфоліо</a>
+            <a href="#">Контакти</a>
+            <a href="tel:+ 380961111111">+38 (096) 111 11 11</a>
+            <a href="mailto:info@devstudio.com">info@devstudio.com</a>    
+          </div>
           <!--List Navigator-->
           <ul class="list">
             <li class="list__item">
@@ -402,11 +427,7 @@
           <ul class="list-footer">
             <li class="list-svg__item">
               <a class="list-svg__link list-svg__link--footer" href="#">
-                <svg
-                  class="list-svg__icon"
-                  width="20"
-                  height="20"
-                >
+                <svg class="list-svg__icon" width="20" height="20">
                   <use
                     href="./images/icon/symbol-defs_2.svg#icon-instagram"
                   ></use>
@@ -415,11 +436,7 @@
             </li>
             <li class="list-svg__item">
               <a class="list-svg__link list-svg__link--footer" href="#">
-                <svg
-                  class="list-svg__icon"
-                  width="20"
-                  height="20"
-                >
+                <svg class="list-svg__icon" width="20" height="20">
                   <use
                     href="./images/icon/symbol-defs_2.svg#icon-twitter"
                   ></use>
@@ -428,11 +445,7 @@
             </li>
             <li class="list-svg__item">
               <a class="list-svg__link list-svg__link--footer" href="#">
-                <svg
-                  class="list-svg__icon"
-                  width="20"
-                  height="20"
-                >
+                <svg class="list-svg__icon" width="20" height="20">
                   <use
                     href="./images/icon/symbol-defs_2.svg#icon-facebook"
                   ></use>
@@ -441,11 +454,7 @@
             </li>
             <li class="list-svg__item">
               <a class="list-svg__link list-svg__link--footer" href="#">
-                <svg
-                  class="list-svg__icon"
-                  width="20"
-                  height="20"
-                >
+                <svg class="list-svg__icon" width="20" height="20">
                   <use
                     href="./images/icon/symbol-defs_2.svg#icon-linkedin"
                   ></use>
@@ -565,6 +574,7 @@
         </button>
       </div>
     </div>
+    <script src="./js/mobile.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

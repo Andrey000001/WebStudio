@@ -1,5 +1,4 @@
 .list {
-    display: none;
     @media screen and (max-width: 767px) {
         display: none;
     }
@@ -8,9 +7,8 @@
         @include list(flex);
         margin-left: 88px;
         gap: 50px;
-
     }
-
+    
     &__link {
         position: relative;
 
@@ -47,9 +45,5 @@
       
         border-radius: 2px;
         background-color: $color-hover;
-    }
-
-    &__item + &__item {
-        // margin-left: 50px;
     }
 }
