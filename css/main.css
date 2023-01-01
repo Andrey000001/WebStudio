@@ -1028,13 +1028,6 @@ body {
         flex-wrap: wrap;
   }
 }
-@media screen and (min-width: 1200px) {
-  .footer-contain {
-    margin: 0;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-  }
-}
 
 .contact-information {
   display: -webkit-box;
@@ -1056,13 +1049,11 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .contact-information {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    margin: 0;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    margin: 0 165px 0 0;
+    margin-right: 93px;
   }
 }
 .contact-information__link {
@@ -1124,7 +1115,7 @@ body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    margin-right: 94px;
+    margin: 0 94px 0 0;
   }
 }
 .join-text {
@@ -1157,6 +1148,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 450px;
+  width: 100%;
 }
 @media screen and (min-width: 1200px) {
   .subscribe {
@@ -1187,21 +1180,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-@media screen and (min-width: 1200px) {
-  .button-join {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    gap: 12px;
-  }
+  width: 100%;
 }
 .button-join__input {
   font-family: "roboto";
@@ -1209,18 +1188,18 @@ body {
   line-height: 20px;
   font-size: 16px;
   letter-spacing: 0.03em;
-  width: 450px;
   height: 50px;
   margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   color: rgba(255, 255, 255, 0.6);
   background-color: #2f303a;
+  width: 100%;
   outline: none;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .button-join__input {
-    width: 100%;
+    padding: 10px;
   }
 }
 

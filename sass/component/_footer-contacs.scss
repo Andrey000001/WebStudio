@@ -1,7 +1,5 @@
 .footer {
     background-color: #2f303a;
-    // width: 100%;
-    // height: 252px;
 }
 .footer-contain {
     padding-top: 60px;
@@ -17,10 +15,7 @@
         justify-content: center;
         flex-wrap: wrap;
     }
-    @media screen and (min-width: 1200px) {
-        margin: 0;
-        flex-wrap: nowrap;
-    }
+  
     
 }
 .contact-information {
@@ -32,10 +27,11 @@
         margin-right: 165px;
     }
     @media screen and (min-width: 1200px) {
-        display: flex;
+        margin: 0;
         align-items: flex-start;
-        margin: 0 165px 0 0;
+        margin-right: 93px;
     }
+    
 
     &__link {
         font-family: "Raleway";
