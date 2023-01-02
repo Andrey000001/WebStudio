@@ -5,6 +5,9 @@ body {
         min-width: 80px;
     }
 }
+body.modal-open {
+    overflow: hidden;
+}
 
 .page-header {
     position: fixed;

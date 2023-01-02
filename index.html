@@ -17,7 +17,7 @@
           <a class="nav__link" href="/index.html"
             >Web<span class="nav__studio">Studio</span></a
           >
-          <button type="button" class="menu_button is-open" data-menu-button>
+          <button type="button" class="menu_button js-open-menu">
             <svg
               width="24"
               height="16"
@@ -26,21 +26,32 @@
               aria-controls="menu-contain"
             >
               <use
-                class="icon-menu"
+                class="icon_menu"
                 href="./images/icon/symbol-defs_2.svg#icon-menu_24px"
               ></use>
-              <use
-                class="icon-close"
-                href="./images/icon/symbol-defs_2.svg#icon-close"
-              ></use>
-            </svg>
           </button>
-          <div class="menu-contain" id="menu-contain" data-menu>
-            <a href="#">Студія</a>
-            <a href="#">Порфоліо</a>
-            <a href="#">Контакти</a>
-            <a href="tel:+ 380961111111">+38 (096) 111 11 11</a>
-            <a href="mailto:info@devstudio.com">info@devstudio.com</a>    
+
+          <div class="menu-contain" id="menu-contain js-menu-container">
+            <button class="menu-btn js-close-menu">
+              <svg class="menu-btn__siz" width="18.67px" height="18.67px">
+                <use class="menu-btn__icon" href="./images/icon/symbol-defs_2.svg#icon-close"></use>
+              </svg>
+            </button>
+            <div class="menu-container">
+              <a class="menu-container__link" href="#">Студія</a>
+              <a class="menu-container__link" href="#">Порфоліо</a>
+              <a class="menu-container__link" href="#">Контакти</a>
+            </div>
+            <div class="menu-contacts"> 
+              <a class="menu-contacts__tel" href="tel:+ 380961111111">+38 (096) 111 11 11</a>
+              <a class="menu-contacts__mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </div>  
+            <div class="menu-social">
+              <a class="menu-social__network" href="#">Instagram<span class="menu-social__partition"> |</span></a>
+              <a class="menu-social__network" href="#">Twitter<span class="menu-social__partition"> |</span></a>
+              <a class="menu-social__network" href="#">Facebook<span class="menu-social__partition"> |</span></a>
+              <a class="menu-social__network" href="#">LinkedIn</a>
+            </div>
           </div>
           <!--List Navigator-->
           <ul class="list">
@@ -560,7 +571,7 @@
                 class="form__checkbox"
               />
               <span class="form__icon-checkbox"></span>Погоджуюся з розсилкою та
-              приймаю <a href="#" class="policy-text">Умови договору</a>
+              приймаю&#160;<a href="#" class="policy-text">Умови договору</a>
             </label>
           </div>
 

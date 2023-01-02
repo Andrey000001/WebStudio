@@ -1,0 +1,125 @@
+.menu_button {
+    display: inline-block;
+    margin: 0 0 0 auto;
+    padding: 0;
+
+    border: none;
+    background-color: transparent;
+
+    .icon_menu:hover,
+    .icon_menu:focus {
+        fill: $color-hover;
+    }
+
+    .icon_menu {
+        cursor: pointer;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+
+
+.menu-contain {
+    display: none;
+ 
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 100vh;
+    width: 100vw;
+    
+    border-radius: 4px;
+    background-color: $color-backround;
+    padding: 48px 40px;
+
+    &.is-open {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.menu-btn {
+    position: absolute;
+    top: 21px;
+    right: 25px;
+    margin: 0;
+    border: none;
+    padding: 0;
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+.menu-btn:hover,
+.menu-btn:hover {
+    fill: $color-hover;
+}
+.menu-container {
+    margin-bottom: auto;
+    &__link {
+        display: block;
+        
+        font-family: "roboto";
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.175;
+        letter-spacing: 0.02em;
+
+        color: #212121;
+        text-decoration: none;
+    }
+    &__link:not(:last-child) {
+        margin-bottom: 32px;
+    }
+    &__link:hover,
+    &__link:focus {
+        color: $color-hover;
+    }
+}
+.menu-contacts {
+    &__tel {
+        display: block;
+        margin-bottom: 32px;
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 1.176;
+        letter-spacing: 0.02em;
+        color: #2196F3;
+        text-decoration: none;
+
+    }
+    &__mail {
+        display: block;
+        margin-bottom: 64px;
+    
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.16;
+        letter-spacing: 0.02em;
+        
+        text-decoration: none;
+        color: #757575;
+    }
+}
+
+.menu-social {
+    &__network {
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.22;
+        letter-spacing: 0.02em;
+    
+        color: #2196F3;
+        text-decoration: none;
+    }
+    &__partition {
+        color: #21212133;
+    }
+    
+}
