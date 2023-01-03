@@ -1,119 +1,117 @@
 .cards {
-    padding: 60px 0;
+  padding: 60px 0;
 
-    @media screen and (min-width: 1200px) {
-        padding: 94px 0;
-    }
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
 }
 
 .list-skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+
+  @media screen and (min-width: 768px) {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    list-style: none;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    gap: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+
+    gap: 30px;
+  }
+
+  &__item {
+    max-width: 354px;
+    margin-bottom: 30px;
 
     @media screen and (min-width: 768px) {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-
-        gap: 30px;
+      margin: 0;
     }
 
     @media screen and (min-width: 1200px) {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: flex-start;
-
-        gap: 30px;
+      margin: 0;
     }
+  }
 
-    &__item {
-        max-width: 354px;
-        margin-bottom: 30px;
+  &__item::before {
+    content: "";
+    display: block;
 
-       @media screen and (min-width:768px) {
-            margin: 0;
-       }
+    margin-bottom: 30px;
+    height: 120px;
 
-       @media screen and (min-width: 1200px) {
-            margin: 0;
-       }
-    }
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 
-    &__item::before {
-        content: "";
-        display: block;
+    background-color: #f5f4fa;
+    border-radius: 4px;
+  }
 
-        margin-bottom: 30px;
-        height: 120px;
-      
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-      
-        background-color: #f5f4fa;
-        border-radius: 4px;
-    }
+  &__item:last-child {
+    margin-bottom: 0;
+  }
 
-    &__item:last-child {
-        margin-bottom: 0;
-    }
-    
-    &--antenna::before {
-        background-image: url(../../images/icon/svg/antenna.svg);
-        @extend %background-images;
-        background-size: 65.32px 70px;
-    }
-    &--clock::before {
-        background-image: url(../../images/icon/svg/clock.svg);
-        @extend %background-images;
-        background-size: 66.96px 70px;
-    }
-    &--diagram::before {
-        background-image: url(../../images/icon/svg/diagram.svg);
-        @extend %background-images;
-        background-size: 53.69px 70px;
-    }
-    &--astronaut::before {
-        background-image: url(../../images/icon/svg/astronaut.svg);
-        @extend %background-images;
-        background-size: 70px 70px;
-    }
+  &--antenna::before {
+    background-image: url(../../images/icon/svg/antenna.svg);
+    @extend %background-images;
+    background-size: 65.32px 70px;
+  }
+  &--clock::before {
+    background-image: url(../../images/icon/svg/clock.svg);
+    @extend %background-images;
+    background-size: 66.96px 70px;
+  }
+  &--diagram::before {
+    background-image: url(../../images/icon/svg/diagram.svg);
+    @extend %background-images;
+    background-size: 53.69px 70px;
+  }
+  &--astronaut::before {
+    background-image: url(../../images/icon/svg/astronaut.svg);
+    @extend %background-images;
+    background-size: 70px 70px;
+  }
 
-    &__logo {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 10px;
+  &__logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
 
-        font-family: $font-roboto;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 1.14;
-        letter-spacing: $letter-spacing;
+    font-family: $font-roboto;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: $letter-spacing;
 
-        color: #212121;
-    }
+    color: #212121;
+  }
 
-    &__text {
-        margin-top: 0;
-        margin-bottom: 0;
-      
-        font-family: $font-roboto;
-        font-size: 14px;
-        line-height: 1.714;
-        letter-spacing: 0.03em;
-      
-        color: #757575;
-    }
+  &__text {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-family: $font-roboto;
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+
+    color: #757575;
+  }
 }
- 
-$icon: "antenna" , "clock" ,"diagram" , "astronaut";
+
+$icon: "antenna", "clock", "diagram", "astronaut";
 
 @each $iconName in $icon {
-    .list-skills__item-#{$iconName} {
-        background-image: url(../images/icon/svg/#{$iconName}.svg);
-    }
+  .list-skills__item-#{$iconName} {
+    background-image: url(../images/icon/svg/#{$iconName}.svg);
+  }
 }
-
-

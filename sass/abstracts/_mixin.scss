@@ -1,13 +1,13 @@
-@mixin list ($type) {
-    display: $type;
-    margin: 0;
-    padding: 0;
+@mixin list($type) {
+  display: $type;
+  margin: 0;
+  padding: 0;
 
-    list-style: none;
+  list-style: none;
 }
 
-@mixin centeredFlex ($type) {
-    display: $type;
-    align-items: center;
-    justify-content: center;
+@mixin centeredFlex($type) {
+  display: $type;
+  align-items: center;
+  justify-content: center;
 }

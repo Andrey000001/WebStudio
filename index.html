@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,41 +17,33 @@
           <a class="nav__link" href="/index.html"
             >Web<span class="nav__studio">Studio</span></a
           >
-          <button type="button" class="menu_button js-open-menu">
-            <svg
-              width="24"
-              height="16"
-              aria-expanded="false"
-              aria-label="Переключатель мобильного меню"
-              aria-controls="menu-contain"
-            >
-              <use
-                class="icon_menu"
-                href="./images/icon/symbol-defs_2.svg#icon-menu_24px"
-              ></use>
+          <button type="button" class="menu-open js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg width="24" height="16">
+              <use href="./images/icon/symbol-defs_2.svg#icon-menu_24px">
+              </use>
+            </svg>
           </button>
-
-          <div class="menu-contain" id="menu-contain js-menu-container">
-            <button class="menu-btn js-close-menu">
-              <svg class="menu-btn__siz" width="18.67px" height="18.67px">
-                <use class="menu-btn__icon" href="./images/icon/symbol-defs_2.svg#icon-close"></use>
+          <div class="menu-container js-menu-container" id="mobile-menu">
+            <button class="menu-toggle js-close-menu">
+              <svg class="menu-toggle__icon-close" width="18" height="18">
+                <use class="menu-toggle__icon-close--use" href="./images/icon/symbol-defs_2.svg#icon-close"></use>
               </svg>
             </button>
-            <div class="menu-container">
-              <a class="menu-container__link" href="#">Студія</a>
-              <a class="menu-container__link" href="#">Порфоліо</a>
-              <a class="menu-container__link" href="#">Контакти</a>
+            <ul class="mobile-menu">
+              <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Студія </a></li>
+              <li class="mobile-menu__item"><a class="mobile-menu__link" href="#"> Порфоліо</a></li>
+              <li class="mobile-menu__item"><a class="mobile-menu__link" href="#"> Контакти</a></li>
+            </ul>
+            <div class="mobile-contact">
+              <a class="mobile-contact__tel" href="tel:+3809999999">+3809999999</a>
+              <a class="mobile-contact__mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
             </div>
-            <div class="menu-contacts"> 
-              <a class="menu-contacts__tel" href="tel:+ 380961111111">+38 (096) 111 11 11</a>
-              <a class="menu-contacts__mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
-            </div>  
-            <div class="menu-social">
-              <a class="menu-social__network" href="#">Instagram<span class="menu-social__partition"> |</span></a>
-              <a class="menu-social__network" href="#">Twitter<span class="menu-social__partition"> |</span></a>
-              <a class="menu-social__network" href="#">Facebook<span class="menu-social__partition"> |</span></a>
-              <a class="menu-social__network" href="#">LinkedIn</a>
-            </div>
+            <ul class="social">
+              <li class="social__network"><a class="social__name" href="#">Instagram</a></li>
+              <li class="social__network"><a class="social__name" href="#">Twitter</a></li>
+              <li class="social__network"><a class="social__name" href="#">Facebook</a></li>
+              <li class="social__network"><a class="social__name" href="#">LinkedIn</a></li>
+            </ul>
           </div>
           <!--List Navigator-->
           <ul class="list">
@@ -503,15 +495,15 @@
         <h2 class="modal__subtitle">Залиште свої дані, ми вам передзвонимо</h2>
         <form autocomplete="off" class="form">
           <div class="form__field">
+            <label for="name_user" class="form__label">Ім'я</label>
             <input
               type="text"
-              nama="name"
-              id="name"
+              name="name_user"
+              id="name_user"
               class="form__input"
               placeholder=" "
               autocomplete="on"
             />
-            <label for="name" class="form__label">Ім'я</label>
             <svg class="form__icon" width="20" height="20">
               <use
                 href="./images/icon/symbol-defs_2.svg#icon-person-black-18dp"
@@ -522,7 +514,7 @@
           <div class="form__field">
             <input
               type="tel"
-              nama="tel"
+              name="tel"
               id="tel"
               class="form__input"
               placeholder=" "
@@ -538,7 +530,7 @@
           <div class="form__field">
             <input
               type="email"
-              nama="email"
+              name="email"
               id="email"
               class="form__input"
               placeholder=" "

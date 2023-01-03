@@ -1,125 +1,113 @@
-.menu_button {
-    display: inline-block;
-    margin: 0 0 0 auto;
-    padding: 0;
-
-    border: none;
-    background-color: transparent;
-
-    .icon_menu:hover,
-    .icon_menu:focus {
-        fill: $color-hover;
-    }
-
-    .icon_menu {
-        cursor: pointer;
-    }
-
-    @media screen and (min-width: 768px) {
-        display: none;
-    }
-}
-
-
-
-.menu-contain {
-    display: none;
- 
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    height: 100vh;
-    width: 100vw;
-    
-    border-radius: 4px;
-    background-color: $color-backround;
-    padding: 48px 40px;
-
-    &.is-open {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-.menu-btn {
-    position: absolute;
-    top: 21px;
-    right: 25px;
-    margin: 0;
-    border: none;
-    padding: 0;
-    background-color: #fff;
-    outline: none;
-    cursor: pointer;
-}
-.menu-btn:hover,
-.menu-btn:hover {
-    fill: $color-hover;
-}
 .menu-container {
-    margin-bottom: auto;
-    &__link {
-        display: block;
-        
-        font-family: "roboto";
-        font-weight: 500;
-        font-size: 40px;
-        line-height: 1.175;
-        letter-spacing: 0.02em;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
 
-        color: #212121;
-        text-decoration: none;
-    }
-    &__link:not(:last-child) {
-        margin-bottom: 32px;
-    }
-    &__link:hover,
-    &__link:focus {
-        color: $color-hover;
-    }
+  padding: 48px 40px;
+  background: $color-backround;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  max-width: 768px;
+
+  z-index: 40;
+  transform: translateX(100%);
+  transition: 250ms;
+  overflow-y: scroll;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+ 
 }
-.menu-contacts {
-    &__tel {
-        display: block;
-        margin-bottom: 32px;
-        font-family: 'Roboto';
-        font-weight: 500;
-        font-size: 34px;
-        line-height: 1.176;
-        letter-spacing: 0.02em;
-        color: #2196F3;
-        text-decoration: none;
+.menu-open {
+  padding: 0;
+  border: 0;
+  background-color: $color-backround;
+  cursor: pointer;
+  margin-left: auto;
+  @media screen and (min-width:768px) {
+    display: none;
+  }
+}
+.menu-toggle {
+  position: absolute;
+  padding: 0;
+  border: 0;
+  top: 21px;
+  right: 25px;
+  background-color: $color-backround;
+  cursor: pointer;
+ &__icon-close:hover {
+  fill: $color-hover;
+ }
 
-    }
-    &__mail {
-        display: block;
-        margin-bottom: 64px;
-    
-        font-family: 'Roboto';
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 1.16;
-        letter-spacing: 0.02em;
-        
-        text-decoration: none;
-        color: #757575;
-    }
 }
 
-.menu-social {
-    &__network {
-        font-family: 'Roboto';
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 1.22;
-        letter-spacing: 0.02em;
-    
-        color: #2196F3;
-        text-decoration: none;
-    }
-    &__partition {
-        color: #21212133;
-    }
-    
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: auto;
+  list-style: none;
+  gap: 32px;
+  &__link {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+
+    text-decoration: none;
+
+    color: #212121;
+  }
+  &__link:hover ,
+  &__link:focus {
+    color: $color-hover;
+  }
+}
+.mobile-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  &__tel {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.176;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    color: #2196F3;
+  }
+  &__mail {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    margin: 0 0 64px 0;
+    color: #757575;
+  }
+}
+.social {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  &__name {
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+
+    letter-spacing: 0.02em;
+
+    color: #2196F3;
+  }
 }

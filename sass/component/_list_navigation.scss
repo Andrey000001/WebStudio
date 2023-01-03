@@ -1,49 +1,49 @@
 .list {
-    @media screen and (max-width: 767px) {
-        display: none;
-    }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 
-    @media screen and (min-width: 768px) {
-        @include list(flex);
-        margin-left: 88px;
-        gap: 50px;
-    }
-    
-    &__link {
-        position: relative;
+  @media screen and (min-width: 768px) {
+    @include list(flex);
+    margin-left: 88px;
+    gap: 50px;
+  }
 
-        display: block;
-        padding-top: 32px;
-        padding-bottom: 32px;
-      
-        font-family: $font-roboto;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 1.1428;
-        letter-spacing: 0.02em;
-      
-        text-decoration: none;
-        color: #212121;
-      
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    &__link:hover,
-    &__link:focus {
-        color: $color-hover;
-    }   
+  &__link {
+    position: relative;
 
-    &__card::after {
-        content: "";
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
-        position: absolute;
-        left: 0;
-        bottom: 0;
-      
-        width: 100%;
-        height: 4px;
-      
-        border-radius: 2px;
-        background-color: $color-hover;
-    }
+    font-family: $font-roboto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1428;
+    letter-spacing: 0.02em;
+
+    text-decoration: none;
+    color: #212121;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $color-hover;
+  }
+
+  &__card::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 4px;
+
+    border-radius: 2px;
+    background-color: $color-hover;
+  }
 }

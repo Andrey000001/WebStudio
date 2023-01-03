@@ -327,7 +327,8 @@ li {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 html {
@@ -364,6 +365,10 @@ html {
 }
 
 body {
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--primary-text-color);
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
   padding-top: 60px;
 }
 @media screen and (min-width: 80px) {
@@ -544,38 +549,8 @@ body.modal-open {
   fill: currentColor;
 }
 
-.menu_button {
-  display: inline-block;
-  margin: 0 0 0 auto;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-}
-.menu_button .icon_menu:hover,
-.menu_button .icon_menu:focus {
-  fill: #2196F3;
-}
-.menu_button .icon_menu {
-  cursor: pointer;
-}
-@media screen and (min-width: 768px) {
-  .menu_button {
-    display: none;
-  }
-}
-
-.menu-contain {
-  display: none;
+.menu-container {
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  border-radius: 4px;
-  background-color: #FFF;
-  padding: 48px 40px;
-}
-.menu-contain.is-open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -583,79 +558,127 @@ body.modal-open {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 48px 40px;
+  background: #FFF;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  max-width: 768px;
+  z-index: 40;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  overflow-y: scroll;
+}
+.menu-container.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: none;
+  }
 }
 
-.menu-btn {
+.menu-open {
+  padding: 0;
+  border: 0;
+  background-color: #FFF;
+  cursor: pointer;
+  margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .menu-open {
+    display: none;
+  }
+}
+
+.menu-toggle {
   position: absolute;
+  padding: 0;
+  border: 0;
   top: 21px;
   right: 25px;
-  margin: 0;
-  border: none;
-  padding: 0;
-  background-color: #fff;
-  outline: none;
+  background-color: #FFF;
   cursor: pointer;
 }
-
-.menu-btn:hover,
-.menu-btn:hover {
+.menu-toggle__icon-close:hover {
   fill: #2196F3;
 }
 
-.menu-container {
+.mobile-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: auto;
+  list-style: none;
+  gap: 32px;
 }
-.menu-container__link {
-  display: block;
-  font-family: "roboto";
+.mobile-menu__link {
+  font-family: "Roboto";
   font-weight: 500;
-  font-size: 40px;
+  font-size: 32px;
   line-height: 1.175;
   letter-spacing: 0.02em;
-  color: #212121;
   text-decoration: none;
+  color: #212121;
 }
-.menu-container__link:not(:last-child) {
-  margin-bottom: 32px;
-}
-.menu-container__link:hover, .menu-container__link:focus {
+.mobile-menu__link:hover, .mobile-menu__link:focus {
   color: #2196F3;
 }
 
-.menu-contacts__tel {
-  display: block;
-  margin-bottom: 32px;
+.mobile-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+}
+.mobile-contact__tel {
   font-family: "Roboto";
   font-weight: 500;
   font-size: 34px;
   line-height: 1.176;
   letter-spacing: 0.02em;
-  color: #2196F3;
   text-decoration: none;
+  color: #2196F3;
 }
-.menu-contacts__mail {
-  display: block;
-  margin-bottom: 64px;
+.mobile-contact__mail {
   font-family: "Roboto";
   font-weight: 500;
   font-size: 24px;
   line-height: 1.16;
   letter-spacing: 0.02em;
-  text-decoration: none;
+  margin: 0 0 64px 0;
   color: #757575;
 }
 
-.menu-social__network {
+.social {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.social__name {
+  text-decoration: none;
   font-family: "Roboto";
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196F3;
-  text-decoration: none;
-}
-.menu-social__partition {
-  color: rgba(33, 33, 33, 0.2);
 }
 
 .overlay {
