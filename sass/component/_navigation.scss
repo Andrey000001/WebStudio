@@ -1,10 +1,10 @@
 .nav {
-  max-width: 480px;
-  @extend %container;
-  
   display: flex;
   align-items: baseline;
-  
+
+  max-width: 480px;
+  @extend %container;
+
   @media screen and (min-width: 768px) {
     align-items: center;
     max-width: 768px;
@@ -25,9 +25,11 @@
     text-decoration: none;
 
     padding: 16px 0;
+
     @media screen and (min-width:768px) {
       padding: 26px 0;
     }
+
     @media screen and (min-width: 1200px) {
       font-size: 26px;
       padding: 24px 0 25px 0;

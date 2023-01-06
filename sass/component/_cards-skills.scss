@@ -1,6 +1,7 @@
 .cards {
   padding-top: 60px;
   padding-bottom: 60px;
+
   @extend %container;
 
   @media screen and (min-width: 1200px) {
@@ -18,7 +19,6 @@
   list-style: none;
 
   @media screen and (min-width: 768px) {
-    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
@@ -27,7 +27,6 @@
   }
 
   @media screen and (min-width: 1200px) {
-    display: flex;
     flex-wrap: nowrap;
     align-items: flex-start;
 
@@ -36,7 +35,6 @@
 
   &__item {
     max-width: 450px;
-    
     margin-bottom: 30px;
 
     @media screen and (min-width: 768px) {
@@ -45,7 +43,6 @@
     }
 
     @media screen and (min-width: 1200px) {
-      margin: 0;
       max-width: 270px;
     }
   }

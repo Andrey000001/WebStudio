@@ -5,6 +5,7 @@
 
   max-width: 370px;
   width: 100%;
+
   @media screen and (min-width: 1200px) {
     max-width: 448px;
   }
@@ -37,7 +38,7 @@
   .form__input:focus + .form__label,
   .form__input:not(:placeholder-shown) + .form__label {
     transform: translate(-30px, -40px);
-    transition: transform 300ms, color 250ms;
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     color: $color-hover;
   }
@@ -73,7 +74,7 @@
     height: 18px;
 
     transform: translateY(-50%);
-    transition: fill 250ms;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &__textarea-content {
@@ -100,7 +101,8 @@
     color: rgba(117, 117, 117, 0.5);
 
     resize: none;
-    transition: outline-color 300ms;
+    transition: outline-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
     @media screen and (min-width: 1200px) {
       max-width: 450px;
     }
@@ -119,7 +121,7 @@
     color: #757575;
 
     transform: scale(0);
-    transition: transform 300ms;
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &__policy {
@@ -133,6 +135,7 @@
     letter-spacing: 0.03em;
 
     color: #757575;
+
     @media screen and (min-width: 1200px) {
       font-size: 14px;
     }
@@ -152,7 +155,7 @@
     border-radius: 4px;
     border: 2px solid #000;
 
-    transition: transform 300ms;
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .form__checkbox:checked:focus ~ .form__icon-checkbox {
@@ -171,7 +174,7 @@
   &__textarea:focus + &__commentar,
   &__textarea:not(:placeholder-shown) + &__commentar {
     transform: translate(-24px, -70px);
-    transition: color 250ms;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     color: $color-hover;
   }
