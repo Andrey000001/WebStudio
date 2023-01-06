@@ -1,10 +1,13 @@
 .cards-addition {
+  @extend %container;
+
   @media screen and (max-width: 1199px) {
     display: none;
   }
 
   @media screen and (min-width: 1200px) {
-    padding: 0 0 94px 0;
+    padding-bottom: 94px;
+    max-width: 1200px;
   }
 
   &__subtitle {

@@ -41,6 +41,10 @@
       margin: 0;
     }
   }
+  &__link:hover ,
+  &__link:focus {
+    color: $color-hover;
+  }
 
   &__link:last-child {
     margin-bottom: 0;

@@ -26,10 +26,15 @@
   @extend %list;
   gap: 10px;
 
-  .list-svg__link--footer {
+  .list-svg__link {
     fill: #fff;
     border-radius: 50%;
 
     background-color: #ffffff1a;
+    transition: background-color 250ms;
+  }
+  .list-svg__link:hover,
+  .list-svg__link:focus {
+    background-color: $color-hover;
   }
 }

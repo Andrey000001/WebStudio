@@ -37,13 +37,12 @@
   border: 1px solid #0000001a;
   background-color: $color-backround;
 
-  &:hover,
-  &:focus {
-    fill: $color-hover;
-  }
-
   &__close {
     width: 11px;
     height: 11px;
   }
+}
+.close:hover ,
+.close:focus {
+  fill: $color-hover;
 }

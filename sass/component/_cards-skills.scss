@@ -1,8 +1,13 @@
 .cards {
-  padding: 60px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @extend %container;
 
   @media screen and (min-width: 1200px) {
-    padding: 94px 0;
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    max-width: 1200px;
   }
 }
 
@@ -16,6 +21,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
 
     gap: 30px;
   }
@@ -29,15 +35,18 @@
   }
 
   &__item {
-    max-width: 354px;
+    max-width: 450px;
+    
     margin-bottom: 30px;
 
     @media screen and (min-width: 768px) {
       margin: 0;
+      max-width: 354px;
     }
 
     @media screen and (min-width: 1200px) {
       margin: 0;
+      max-width: 270px;
     }
   }
 

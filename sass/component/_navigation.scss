@@ -1,19 +1,37 @@
 .nav {
+  max-width: 480px;
+  @extend %container;
+  
   display: flex;
-  align-items: center;
+  align-items: baseline;
+  
+  @media screen and (min-width: 768px) {
+    align-items: center;
+    max-width: 768px;
+  }
+  
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
 
   &__link {
     font-family: $font-raleway;
     font-weight: 700;
-    font-size: 26px;
+    font-size: 24px;
     line-height: 1.19;
     letter-spacing: $letter-spacing;
 
     color: $color-hover;
     text-decoration: none;
 
-    padding-top: 24px;
-    padding-bottom: 25px;
+    padding: 16px 0;
+    @media screen and (min-width:768px) {
+      padding: 26px 0;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 26px;
+      padding: 24px 0 25px 0;
+    }
   }
 
   &__studio {

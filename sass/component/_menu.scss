@@ -12,14 +12,14 @@
   max-width: 768px;
 
   z-index: 40;
-  transform: translateX(100%);
-  transition: 250ms;
+  transform: translate(-100% ,100%);
+  transition: transform 250ms;
   overflow-y: scroll;
 
   &.is-open {
-    transform: translateX(0);
+    transform: translate(0 , 0);
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 767px) {
     display: none;
   }
 
@@ -31,9 +31,15 @@
   background-color: $color-backround;
   cursor: pointer;
   margin-left: auto;
+  transition: fill 250ms;
+
   @media screen and (min-width:768px) {
     display: none;
   }
+}
+.menu-open:hover,
+.menu-open:focus {
+  fill: $color-hover
 }
 .menu-toggle {
   position: absolute;
@@ -107,7 +113,10 @@
     line-height: 1.22;
 
     letter-spacing: 0.02em;
-
+  
     color: #2196F3;
+  }
+  &__network:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);;
   }
 }
