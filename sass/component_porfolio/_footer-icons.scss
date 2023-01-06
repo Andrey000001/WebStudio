@@ -1,0 +1,17 @@
+.list-footer {
+    &__link {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        transition: background-color 250ms;
+        fill: #fff;
+    }
+    &__link:hover ,
+    &__link:focus {
+        background-color: $color-hover;
+    }
+}

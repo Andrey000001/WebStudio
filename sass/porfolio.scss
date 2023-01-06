@@ -11,22 +11,22 @@
 //  Mixin
 @import "./abstracts/mixin";
 
+// Page header 
+@import './component/page-header';
+@import './component/navigation';
+@import './component/list_navigation';
+@import './component/nav_contacts';
 
-// Component-Porfolio
-// Page header
-@import './component-porfolio/page-header';
-@import './component-porfolio/page-heder-nav';
+// Menu-NAV
+@import './component/menu';
+@import './component_porfolio/main-btn';
+@import './component_porfolio/set-photo';
+// main
 
-// Main (btn)
-@import './component-porfolio/buttons';
 
-// Main (content)
-@import './component-porfolio/main';
-@import './component-porfolio/main-set';
-@import './component-porfolio/main-text';
+// Footer
+@import './component/footer-contacs';
+@import './component/footer-join';
+@import './component/footer-send';
+@import './component_porfolio/footer-icons';
 
-// FOOTER
-@import './component-porfolio/footer';
-@import './component-porfolio/footer-contacts';
-@import './component-porfolio/footer-join';
-@import './component-porfolio/footer-input';
