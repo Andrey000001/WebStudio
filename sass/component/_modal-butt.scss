@@ -3,7 +3,7 @@
   width: 200px;
   height: 50px;
 
-  font-family: "Roboto";
+  font-family: $fontRoboto;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
@@ -13,7 +13,7 @@
   border-radius: 4px;
 
   background-color: #188ce8;
-  color: $color-backround;
+  color: $primarycolor;
 
   cursor: pointer;
 }
@@ -35,7 +35,7 @@
   cursor: pointer;
   border-radius: 50%;
   border: 1px solid #0000001a;
-  background-color: $color-backround;
+  background-color: $primarycolor;
 
   &__close {
     width: 11px;
@@ -44,5 +44,5 @@
 }
 .close:hover ,
 .close:focus {
-  fill: $color-hover;
+  fill: $hovercolor;
 }

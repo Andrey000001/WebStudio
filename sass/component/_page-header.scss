@@ -1,7 +1,7 @@
 body {
   margin-left: auto;
   margin-right: auto;
-  color: var(--primary-text-color);
+  color: $primarycolor;
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, avenir next, avenir,
     segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
     sans-serif;
@@ -16,7 +16,11 @@ body {
 body.modal-open  {
   overflow: hidden;
 }
-
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .page-header {
   position: fixed;
   top: 0;
@@ -27,7 +31,7 @@ body.modal-open  {
 
   z-index: 1;
 
-  background-color: $color-backround;
+  background-color: $primarycolor;
   border: 1px solid #ECECEC;
 
   @media screen and (min-width: 768px) {

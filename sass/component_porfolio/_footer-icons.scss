@@ -8,13 +8,13 @@
         height: 44px;
         
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        fill: #fff;
+        fill: $primarycolor;
         border-radius: 50%;
         background-color: rgba(255, 255, 255, 0.1);
     }
 
     &__link:hover ,
     &__link:focus {
-        background-color: $color-hover;
+        background-color: $hovercolor;
     }
 }

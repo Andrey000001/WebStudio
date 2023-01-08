@@ -31,7 +31,7 @@
   align-items: center;
   margin-bottom: 60px;
   
-  color: $color-hover;
+  color: $hovercolor;
 
   @media screen and (min-width: 768px) {
     margin-right: 165px;
@@ -46,37 +46,37 @@
     display: inline-block;
     margin-bottom: 20px;
 
-    font-family: "Raleway";
+    font-family: $fontRaleway;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
 
-    color: $color-hover;
+    color: $hovercolor;
     text-decoration: none;
   }
  
   &__web {
-    color: $color-backround;
+    color: $primarycolor;
   }
 
   &__streat {
     margin-bottom: 12px;
 
-    font-family: $font-roboto;
+    font-family: $fontRoboto;
     font-style: normal;
     font-size: 14px;
     line-height: 1.714;
     letter-spacing: 0.03em;
 
-    color: $color-backround;
+    color: $primarycolor;
   }
 
   &__mail,
   &__tel {
     display: block;
 
-    font-family: $font-roboto;
+    font-family: $fontRoboto;
     font-size: 14px;
     line-height: 1.714;
     letter-spacing: 0.03em;
@@ -94,6 +94,6 @@
   &__mail:hover ,
   &__tel:focus ,
   &__mail:focus {
-    color: $color-hover
+    color: $hovercolor;
   }
 }

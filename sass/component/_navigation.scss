@@ -15,13 +15,13 @@
   }
 
   &__link {
-    font-family: $font-raleway;
+    font-family: $fontRaleway;
     font-weight: 700;
     font-size: 24px;
     line-height: 1.19;
-    letter-spacing: $letter-spacing;
+    letter-spacing: 0.03em;
 
-    color: $color-hover;
+    color: $hovercolor;
     text-decoration: none;
 
     padding: 16px 0;
@@ -37,6 +37,6 @@
   }
 
   &__studio {
-    color: #000;
+    color: $piecedark;
   }
 }

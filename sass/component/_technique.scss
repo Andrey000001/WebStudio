@@ -14,13 +14,13 @@
     text-align: center;
     margin-bottom: 50px;
 
-    font-family: $font-roboto;
+    font-family: $fontRoboto;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.1666;
     letter-spacing: 0.03em;
 
-    color: #212121;
+    color: $textcolor;
   }
 }
 
@@ -34,18 +34,17 @@
   &__item {
     position: relative;
     justify-content: center;
+    max-width: 370px;
+    height: 294px;
   }
-
   &__item::before {
-    content: "";
-
+    content: ' ';
     position: absolute;
     left: 0;
     bottom: 0;
-
     width: 100%;
-    height: 70px;
-
+    padding-top: 70px;
+ 
     background: rgba(47, 48, 58, 0.8);
   }
   
@@ -56,12 +55,12 @@
 
     text-align: center;
 
-    font-family: $font-roboto;
+    font-family: $fontRoboto;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
-    letter-spacing: $letter-spacing;
+    letter-spacing: 0.03em;
 
-    color: $color-backround;
+    color: $primarycolor;
   }
 }

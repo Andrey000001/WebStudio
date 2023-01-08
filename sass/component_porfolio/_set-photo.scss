@@ -9,25 +9,21 @@
         flex-direction: inherit;
     }
 
-    &__photo {
-        width: 450px;
-        height: 294px;
-
-        @media screen and (min-width: 768px) {
-            width: 354px;
-        }
-    }
-
     &__item {
         max-width: 450px;
+        width: 100%;
         border: 1px solid rgba(238, 238, 238, 1);
     
         @media screen and (min-width: 768px) {
             max-width: 354px;
         }
+        @media screen and (min-width: 1200px) {
+            max-width: 370px;
+        }
     }
 
-    &__item:hover {
+    &__item:hover ,
+    &__item:focus {
         border: 1px solid #EEEEEE;
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     }
@@ -48,7 +44,7 @@
         left: 0;
         padding: 77px 24px;
     
-        font-family: 'Roboto';
+        font-family: $fontRoboto;
         font-size: 18px;
         line-height: 1.55;
 
@@ -68,25 +64,25 @@
 }
 .list-on {
     padding: 20px 24px;
- 
+    
     &__description {
-        font-family: 'Roboto';
+        font-family: $fontRoboto;
         font-weight: 700;
         font-size: 18px;
         line-height: 2;
         letter-spacing: 0.06em;
 
-        color: #212121;
+        color: $textcolor;
     }
 
     &__name {
-        font-family: 'Roboto';
+        font-family: $fontRoboto;
         font-weight: 400;
         font-size: 16px;
         line-height: 1.66;    
         letter-spacing: 0.03em;
         
-        color: #757575;
+        color: $textprimary;
     }
 }
 

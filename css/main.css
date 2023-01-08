@@ -367,7 +367,7 @@ html {
 body {
   margin-left: auto;
   margin-right: auto;
-  color: var(--primary-text-color);
+  color: #FFF;
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
   padding-top: 60px;
 }
@@ -379,6 +379,12 @@ body {
 
 body.modal-open {
   overflow: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .page-header {
@@ -414,13 +420,13 @@ body.modal-open {
 }
 
 .nav {
-  max-width: 480px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
+  max-width: 480px;
 }
 @media screen and (min-width: 768px) {
   .nav {
@@ -532,9 +538,6 @@ body.modal-open {
 }
 @media screen and (min-width: 1200px) {
   .contacts {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: inherit;
     -webkit-box-direction: inherit;
         -ms-flex-direction: inherit;
@@ -582,6 +585,8 @@ body.modal-open {
 
 .menu-container {
   position: fixed;
+  top: 0;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -590,20 +595,18 @@ body.modal-open {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 48px 40px;
-  background: #FFF;
-  top: 0;
-  left: 0;
   width: 100vw;
   height: 100vh;
   max-width: 768px;
   z-index: 40;
+  overflow-y: scroll;
   -webkit-transform: translate(-100%, 100%);
           transform: translate(-100%, 100%);
-  -webkit-transition: -webkit-transform 250ms;
-  transition: -webkit-transform 250ms;
-  transition: transform 250ms;
-  transition: transform 250ms, -webkit-transform 250ms;
-  overflow-y: scroll;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background: #FFF;
 }
 .menu-container.is-open {
   -webkit-transform: translate(0, 0);
@@ -617,12 +620,12 @@ body.modal-open {
 
 .menu-open {
   padding: 0;
+  margin-left: auto;
   border: 0;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: #FFF;
   cursor: pointer;
-  margin-left: auto;
-  -webkit-transition: fill 250ms;
-  transition: fill 250ms;
 }
 @media screen and (min-width: 768px) {
   .menu-open {
@@ -637,10 +640,10 @@ body.modal-open {
 
 .menu-toggle {
   position: absolute;
-  padding: 0;
-  border: 0;
   top: 21px;
   right: 25px;
+  padding: 0;
+  border: 0;
   background-color: #FFF;
   cursor: pointer;
 }
@@ -661,7 +664,7 @@ body.modal-open {
   gap: 32px;
 }
 .mobile-menu__link {
-  font-family: "Roboto";
+  font-family: "roboto";
   font-weight: 500;
   font-size: 32px;
   line-height: 1.175;
@@ -684,7 +687,7 @@ body.modal-open {
   gap: 32px;
 }
 .mobile-contact__tel {
-  font-family: "Roboto";
+  font-family: "roboto";
   font-weight: 500;
   font-size: 34px;
   line-height: 1.176;
@@ -693,7 +696,7 @@ body.modal-open {
   color: #2196F3;
 }
 .mobile-contact__mail {
-  font-family: "Roboto";
+  font-family: "roboto";
   font-weight: 500;
   font-size: 24px;
   line-height: 1.16;
@@ -713,7 +716,7 @@ body.modal-open {
 }
 .social__name {
   text-decoration: none;
-  font-family: "Roboto";
+  font-family: "roboto";
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
@@ -737,8 +740,8 @@ body.modal-open {
   background-position: center;
   background-size: cover;
   background-color: #2f303a;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/overley/hiro.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/overley/hiro.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/overley/overlay-1600.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/overley/overlay-1600.jpg");
 }
 @media screen and (min-width: 768px) {
   .overlay {
@@ -787,6 +790,16 @@ body.modal-open {
   cursor: pointer;
 }
 
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: url("../images/overley/ovelray-2x-1600.jpg");
+  }
+}
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
+  .overlay {
+    background-image: url("../images/overley/ovelray-3x-1600.jpg");
+  }
+}
 .cards {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -814,9 +827,6 @@ body.modal-open {
 }
 @media screen and (min-width: 768px) {
   .list-skills {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-orient: horizontal;
@@ -831,9 +841,6 @@ body.modal-open {
 }
 @media screen and (min-width: 1200px) {
   .list-skills {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     -webkit-box-align: start;
@@ -854,7 +861,6 @@ body.modal-open {
 }
 @media screen and (min-width: 1200px) {
   .list-skills__item {
-    margin: 0;
     max-width: 270px;
   }
 }
@@ -866,7 +872,7 @@ body.modal-open {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-color: #f5f4fa;
+  background-color: #F5F4FA;
   border-radius: 4px;
 }
 .list-skills__item:last-child {
@@ -965,14 +971,16 @@ body.modal-open {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-width: 370px;
+  height: 294px;
 }
 .list-product__item::before {
-  content: "";
+  content: " ";
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 70px;
+  padding-top: 70px;
   background: rgba(47, 48, 58, 0.8);
 }
 .list-product__text {
@@ -991,7 +999,7 @@ body.modal-open {
 .cards-team {
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: #f5f4fa;
+  background-color: #F5F4FA;
 }
 
 @media screen and (min-width: 768px) {
@@ -1009,12 +1017,8 @@ body.modal-open {
 }
 @media screen and (min-width: 1200px) {
   .list-team {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    gap: 30px;
   }
 }
 .list-team__item {
@@ -1136,19 +1140,14 @@ body.modal-open {
 }
 @media screen and (min-width: 1200px) {
   .list-compani {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    gap: 30px;
-    margin: 0;
   }
 }
 .list-compani__logo {
   max-width: 210px;
-  height: 92px;
   width: 100%;
+  height: 92px;
 }
 @media screen and (max-width: 539px) {
   .list-compani__logo {
@@ -1178,8 +1177,8 @@ body.modal-open {
   width: 100%;
   height: 100%;
   border-radius: 4px;
-  border: 1px solid #afb1b8;
-  fill: #afb1b8;
+  border: 1px solid #AFB1B8;
+  fill: #AFB1B8;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1193,8 +1192,6 @@ body.modal-open {
 }
 
 .footer-contain {
-  padding-top: 60px;
-  padding-bottom: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1205,6 +1202,8 @@ body.modal-open {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   .footer-contain {
@@ -1332,7 +1331,7 @@ body.modal-open {
   gap: 10px;
 }
 .list-footer .list-svg__link {
-  fill: #fff;
+  fill: #FFF;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1019607843);
   -webkit-transition: background-color 250ms;
@@ -1395,9 +1394,6 @@ body.modal-open {
 }
 @media screen and (min-width: 1200px) {
   .button-join {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1513,9 +1509,9 @@ body.modal-open {
 }
 @media screen and (min-width: 1200px) {
   .modal {
+    top: 50%;
     max-width: 528px;
     max-height: 581px;
-    top: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
@@ -1577,24 +1573,24 @@ body.modal-open {
 }
 .form .form__input:not(:-moz-placeholder-shown) + .form__label {
   transform: translate(-30px, -40px);
-  -moz-transition: transform 300ms, color 250ms;
-  transition: transform 300ms, color 250ms;
+  -moz-transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: #2196F3;
 }
 .form .form__input:not(:-ms-input-placeholder) + .form__label {
   transform: translate(-30px, -40px);
-  -ms-transition: transform 300ms, color 250ms;
-  transition: transform 300ms, color 250ms;
+  -ms-transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: #2196F3;
 }
 .form .form__input:focus + .form__label,
 .form .form__input:not(:placeholder-shown) + .form__label {
   -webkit-transform: translate(-30px, -40px);
           transform: translate(-30px, -40px);
-  -webkit-transition: color 250ms, -webkit-transform 300ms;
-  transition: color 250ms, -webkit-transform 300ms;
-  transition: transform 300ms, color 250ms;
-  transition: transform 300ms, color 250ms, -webkit-transform 300ms;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
   color: #2196F3;
 }
 .form__input ~ .form__icon {
@@ -1607,7 +1603,7 @@ body.modal-open {
   position: absolute;
   left: 30px;
   top: 50%;
-  font-family: "Roboto";
+  font-family: "roboto";
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
@@ -1623,8 +1619,8 @@ body.modal-open {
   height: 18px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  -webkit-transition: fill 250ms;
-  transition: fill 250ms;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__textarea-content {
   position: relative;
@@ -1638,15 +1634,15 @@ body.modal-open {
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  font-family: "Roboto";
+  font-family: "roboto";
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
   resize: none;
-  -webkit-transition: outline-color 300ms;
-  transition: outline-color 300ms;
+  -webkit-transition: outline-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: outline-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 1200px) {
   .form__textarea {
@@ -1657,17 +1653,17 @@ body.modal-open {
   position: absolute;
   left: 24px;
   top: 50px;
-  font-family: "Roboto";
+  font-family: "roboto";
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: #757575;
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-transition: -webkit-transform 300ms;
-  transition: -webkit-transform 300ms;
-  transition: transform 300ms;
-  transition: transform 300ms, -webkit-transform 300ms;
+  -webkit-transition: -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__policy {
   display: -webkit-box;
@@ -1678,7 +1674,7 @@ body.modal-open {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Roboto";
+  font-family: "roboto";
   font-size: 12px;
   line-height: 1.714;
   letter-spacing: 0.03em;
@@ -1700,10 +1696,10 @@ body.modal-open {
   margin-right: 7px;
   border-radius: 4px;
   border: 2px solid #000;
-  -webkit-transition: -webkit-transform 300ms;
-  transition: -webkit-transform 300ms;
-  transition: transform 300ms;
-  transition: transform 300ms, -webkit-transform 300ms;
+  -webkit-transition: -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form .form__checkbox:checked:focus ~ .form__icon-checkbox {
   background-image: url(../images/icon/svg/jackdaw.svg);
@@ -1717,21 +1713,21 @@ body.modal-open {
 }
 .form__textarea:not(:-moz-placeholder-shown) + .form__commentar {
   transform: translate(-24px, -70px);
-  -moz-transition: color 250ms;
-  transition: color 250ms;
+  -moz-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: #2196F3;
 }
 .form__textarea:not(:-ms-input-placeholder) + .form__commentar {
   transform: translate(-24px, -70px);
-  -ms-transition: color 250ms;
-  transition: color 250ms;
+  -ms-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: #2196F3;
 }
 .form__textarea:focus + .form__commentar, .form__textarea:not(:placeholder-shown) + .form__commentar {
   -webkit-transform: translate(-24px, -70px);
           transform: translate(-24px, -70px);
-  -webkit-transition: color 250ms;
-  transition: color 250ms;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: #2196F3;
 }
 .form__textarea:focus {
@@ -1746,7 +1742,7 @@ body.modal-open {
 .button-send {
   width: 200px;
   height: 50px;
-  font-family: "Roboto";
+  font-family: "roboto";
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;

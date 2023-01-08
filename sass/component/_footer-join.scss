@@ -12,13 +12,13 @@
   &-text {
     margin-bottom: 20px;
 
-    font-family: $font-roboto;
+    font-family: $fontRoboto;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.1428;
     letter-spacing: 0.03em;
 
-    color: $color-backround;
+    color: $primarycolor;
   }
 }
 
@@ -27,7 +27,7 @@
   gap: 10px;
 
   .list-svg__link {
-    fill: #fff;
+    fill: $primarycolor;
     border-radius: 50%;
 
     background-color: #ffffff1a;
@@ -36,6 +36,6 @@
   
   .list-svg__link:hover,
   .list-svg__link:focus {
-    background-color: $color-hover;
+    background-color: $hovercolor;
   }
 }

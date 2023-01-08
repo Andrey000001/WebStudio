@@ -42,7 +42,7 @@
   padding: 40px;
   height: 600px;
 
-  background-color: $color-backround;
+  background-color: $primarycolor;
   border-radius: 4px;
 
   transform: translate(-50%) scale(1) rotate(-360deg);
@@ -61,13 +61,13 @@
     justify-content: center;
     margin-bottom: 30px;
 
-    font-family: $font-roboto;
+    font-family: $fontRoboto;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
     text-align: center;
     letter-spacing: 0.03em;
 
-    color: #212121;
+    color: $textcolor;
   }
 }

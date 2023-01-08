@@ -25,7 +25,7 @@
     margin-left: 96px;
     margin-bottom: 10px;
 
-    font-family: $font-roboto;
+    font-family: $fontRoboto;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.1428;
@@ -42,7 +42,7 @@
   }
   &__link:hover ,
   &__link:focus {
-    color: $color-hover;
+    color: $hovercolor;
   }
 
   &__link:last-child {
@@ -50,7 +50,7 @@
   }
 
   &__link:hover {
-    color: $color-hover;
+    color: $hovercolor;
   }
 
   &__mail,

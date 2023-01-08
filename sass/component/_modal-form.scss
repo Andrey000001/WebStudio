@@ -32,7 +32,7 @@
   }
 
   &__input:focus {
-    outline-color: $color-hover;
+    outline-color: $hovercolor;
   }
 
   .form__input:focus + .form__label,
@@ -40,15 +40,15 @@
     transform: translate(-30px, -40px);
     transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    color: $color-hover;
+    color: $hovercolor;
   }
 
   &__input ~ &__icon {
-    fill: #212121;
+    fill: $textcolor;
   }
 
   &__input:focus ~ &__icon {
-    fill: $color-hover;
+    fill: $hovercolor;
   }
 
   &__label {
@@ -56,12 +56,12 @@
     left: 30px;
     top: 50%;
 
-    font-family: "Roboto";
+    font-family: $fontRoboto;
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.01em;
 
-    color: #757575;
+    color: $textprimary;
 
     transform: translateY(-50%);
   }
@@ -92,7 +92,7 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 
-    font-family: "Roboto";
+    font-family: $fontRoboto;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.16;
@@ -113,12 +113,12 @@
     left: 24px;
     top: 50px;
 
-    font-family: "Roboto";
+    font-family: $fontRoboto;
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.01em;
 
-    color: #757575;
+    color: $textprimary;
 
     transform: scale(0);
     transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -129,12 +129,12 @@
     flex-wrap: wrap;
     align-items: center;
 
-    font-family: "Roboto";
+    font-family: $fontRoboto;
     font-size: 12px;
     line-height: 1.714;
     letter-spacing: 0.03em;
 
-    color: #757575;
+    color: $textprimary;
 
     @media screen and (min-width: 1200px) {
       font-size: 14px;
@@ -153,7 +153,7 @@
     margin-right: 7px;
 
     border-radius: 4px;
-    border: 2px solid #000;
+    border: 2px solid $piecedark;
 
     transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -165,8 +165,8 @@
     background-position: center;
     background-origin: border-box;
 
-    border-color: $color-hover;
-    background-color: $color-hover;
+    border-color: $hovercolor;
+    background-color: $hovercolor;
 
     transform: scale(1.1);
   }
@@ -176,14 +176,14 @@
     transform: translate(-24px, -70px);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    color: $color-hover;
+    color: $hovercolor;
   }
 
   &__textarea:focus {
-    outline-color: $color-hover;
+    outline-color: $hovercolor;
   }
 }
 
 .policy-text {
-  color: $color-hover;
+  color: $hovercolor;
 }

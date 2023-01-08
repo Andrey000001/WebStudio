@@ -58,7 +58,7 @@
     background-position: center;
     background-size: contain;
 
-    background-color: #f5f4fa;
+    background-color: $secondarycolor;
     border-radius: 4px;
   }
 
@@ -92,25 +92,25 @@
     justify-content: center;
     margin-bottom: 10px;
 
-    font-family: $font-roboto;
+    font-family: $fontRoboto;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
-    letter-spacing: $letter-spacing;
+    letter-spacing: 0.03em;
 
-    color: #212121;
+    color: $textcolor;
   }
 
   &__text {
     margin-top: 0;
     margin-bottom: 0;
 
-    font-family: $font-roboto;
+    font-family: $fontRoboto;
     font-size: 14px;
     line-height: 1.714;
     letter-spacing: 0.03em;
 
-    color: #757575;
+    color: $textprimary;
   }
 }
 
