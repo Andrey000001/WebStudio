@@ -2,48 +2,47 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  @extend %container;
-
   @media screen and (min-width: 1200px) {
     padding-top: 94px;
     padding-bottom: 94px;
-
-    max-width: 1200px;
   }
 }
 
 .list-skills {
   display: flex;
   flex-direction: column;
-  align-items: center;
+
   list-style: none;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
-
-    gap: 30px;
+    margin: -30px 0 0 -30px;
   }
 
   @media screen and (min-width: 1200px) {
     flex-wrap: nowrap;
     align-items: flex-start;
-
-    gap: 30px;
+    flex-direction: inherit;
   }
 
   &__item {
-    max-width: 450px;
-    margin-bottom: 30px;
-
-    @media screen and (min-width: 768px) {
-      margin: 0;
-      max-width: 354px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin: 30px 0 0 30px;
+      width: calc((100% - 60px) / 2);
     }
 
     @media screen and (min-width: 1200px) {
-      max-width: 270px;
+      width: calc((100% - 90px) / 4);
+    }
+  }
+  
+  &__item + &__item {
+    @media screen and (max-width:767px) {
+      margin-top: 30px;  
+    }
+    @media screen and (min-width: 1200px) {
+      margin-left: 30px;
     }
   }
 
@@ -99,6 +98,9 @@
     letter-spacing: 0.03em;
 
     color: $textcolor;
+    @media screen and (min-width: 768px) {
+      justify-content: flex-start;
+    }
   }
 
   &__text {

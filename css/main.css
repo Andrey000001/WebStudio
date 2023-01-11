@@ -352,7 +352,7 @@ html {
   list-style: none;
 }
 
-.footer-contain, .group-cards, .cards-team, .cards-addition, .cards, .nav, .container {
+.container {
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -383,7 +383,7 @@ body.modal-open {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -647,7 +647,7 @@ img {
   background-color: #FFF;
   cursor: pointer;
 }
-.menu-toggle__icon-close:hover {
+.menu-toggle:focus .menu-toggle__icon-close, .menu-toggle:hover .menu-toggle__icon-close {
   fill: #2196F3;
 }
 
@@ -701,6 +701,7 @@ img {
   font-size: 24px;
   line-height: 1.16;
   letter-spacing: 0.02em;
+  text-decoration: none;
   margin: 0 0 64px 0;
   color: #757575;
 }
@@ -728,7 +729,6 @@ img {
 }
 
 .overlay {
-  text-align: center;
   width: 100%;
   padding-bottom: 118px;
   padding-top: 118px;
@@ -736,6 +736,7 @@ img {
   padding-right: 60px;
   max-width: 1600px;
   max-height: 600px;
+  margin: auto;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -743,28 +744,10 @@ img {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/overley/hero.jpg");
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/overley/hero.jpg");
 }
-@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-  .overlay .overlay {
-    background-image: url("../images/overley/hero-2x.jpg");
-  }
-}
-@media screen and (min-width: 768px) {
-  .overlay {
-    width: 100%;
-    padding: 118px 204px;
-    max-height: 400px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .overlay {
-    width: 100%;
-    padding: 200px 0;
-    max-height: 600px;
-  }
-}
 .overlay__title {
   text-align: center;
   margin: 0 auto 30px;
+  max-width: 360px;
   font-family: "roboto";
   font-weight: 900;
   font-size: 26px;
@@ -780,9 +763,13 @@ img {
 }
 .overlay__button {
   position: relative;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
   padding: 10px 24px;
+  margin-left: auto;
+  margin-right: auto;
   font-family: "roboto";
   font-weight: 700;
   font-size: 16px;
@@ -795,26 +782,6 @@ img {
   cursor: pointer;
 }
 
-@media screen and (min-width: 489px) {
-  .overlay {
-    background-image: url("../images/overley/hero2.jpg");
-  }
-}
-@media screen and (min-width: 489px) and (min-device-pixel-ratio: 2), screen and (min-width: 489px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 489px) and (min-resolution: 192dpi), screen and (min-width: 489px) and (min-resolution: 2dppx) {
-  .overlay {
-    background-image: url("../images/overley/hero2-2x.jpg");
-  }
-}
-@media screen and (min-width: 1200px) {
-  .overlay {
-    background-image: url("../images/overley/hero3.jpg");
-  }
-}
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (min-resolution: 288dpi), screen and (min-width: 1200px) and (min-resolution: 3dppx) {
-  .overlay {
-    background-image: url("../images/overley/hero3.jpg");
-  }
-}
 .cards {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -823,7 +790,6 @@ img {
   .cards {
     padding-top: 94px;
     padding-bottom: 94px;
-    max-width: 1200px;
   }
 }
 
@@ -835,12 +801,9 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   list-style: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .list-skills {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -848,10 +811,7 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    gap: 30px;
+    margin: -30px 0 0 -30px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -861,22 +821,31 @@ img {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 30px;
+    -webkit-box-orient: inherit;
+    -webkit-box-direction: inherit;
+        -ms-flex-direction: inherit;
+            flex-direction: inherit;
   }
 }
-.list-skills__item {
-  max-width: 450px;
-  margin-bottom: 30px;
-}
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .list-skills__item {
-    margin: 0;
-    max-width: 354px;
+    margin: 30px 0 0 30px;
+    width: calc((100% - 60px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
   .list-skills__item {
-    max-width: 270px;
+    width: calc((100% - 90px) / 4);
+  }
+}
+@media screen and (max-width: 767px) {
+  .list-skills__item + .list-skills__item {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .list-skills__item + .list-skills__item {
+    margin-left: 30px;
   }
 }
 .list-skills__item::before {
@@ -924,6 +893,13 @@ img {
   letter-spacing: 0.03em;
   color: #212121;
 }
+@media screen and (min-width: 768px) {
+  .list-skills__logo {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
 .list-skills__text {
   margin-top: 0;
   margin-bottom: 0;
@@ -958,7 +934,6 @@ img {
 @media screen and (min-width: 1200px) {
   .cards-addition {
     padding-bottom: 94px;
-    max-width: 1200px;
   }
 }
 .cards-addition__subtitle {
@@ -971,14 +946,21 @@ img {
   letter-spacing: 0.03em;
   color: #212121;
 }
+@media screen and (max-width: 767px) {
+  .cards-addition__subtitle {
+    font-size: 28px;
+  }
+}
 
+.list-product {
+  gap: 30px;
+}
 @media screen and (min-width: 1200px) {
   .list-product {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     list-style: none;
-    gap: 30px;
   }
 }
 .list-product__item {
@@ -1014,28 +996,49 @@ img {
 }
 
 .cards-team {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0 60px 0;
   background-color: #F5F4FA;
 }
+@media screen and (min-width: 1200px) {
+  .cards-team {
+    padding: 94px 0;
+  }
+}
 
-@media screen and (min-width: 768px) {
+.list-team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .list-team {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    gap: 30px;
+    -webkit-box-orient: inherit;
+    -webkit-box-direction: inherit;
+        -ms-flex-direction: inherit;
+            flex-direction: inherit;
+    margin: -30px 0 0 -30px;
   }
 }
 @media screen and (min-width: 1200px) {
   .list-team {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+    -webkit-box-orient: inherit;
+    -webkit-box-direction: inherit;
+        -ms-flex-direction: inherit;
+            flex-direction: inherit;
+  }
+  .list-team__item + .list-team__item {
+    margin-left: 30px;
   }
 }
 .list-team__item {
@@ -1049,30 +1052,27 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   padding-bottom: 24px;
-  margin: 0 auto 30px auto;
-  max-width: 450px;
   background-color: #FFF;
   border-radius: 0px 0px 4px 4px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .list-team__item {
-    max-width: 354px;
-    margin: 0;
+    margin: 30px 0 0 30px;
+    width: calc((100% - 60px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
   .list-team__item {
-    max-width: 270px;
+    width: calc((100% - 90px) / 4);
   }
 }
-.list-team__item:last-child {
-  margin-bottom: 0;
+@media screen and (max-width: 767px) {
+  .list-team__item + .list-team__item {
+    margin-top: 30px;
+  }
 }
 .list-team .data {
   padding: 30px 0 0 0;
@@ -1129,11 +1129,10 @@ img {
 .group-cards {
   padding-top: 60px;
   padding-bottom: 60px;
-  max-width: 768px;
 }
 @media screen and (min-width: 1200px) {
   .group-cards {
-    max-width: 1200px;
+    padding: 94px 0;
   }
 }
 
@@ -1147,13 +1146,7 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 30px;
-  margin: 30px;
   list-style: none;
-}
-@media screen and (min-width: 768px) {
-  .list-compani {
-    margin: 0;
-  }
 }
 @media screen and (min-width: 1200px) {
   .list-compani {
@@ -1161,24 +1154,24 @@ img {
         flex-wrap: nowrap;
   }
 }
-.list-compani__logo {
-  max-width: 210px;
-  width: 100%;
-  height: 92px;
-}
-@media screen and (max-width: 539px) {
+@media screen and (max-width: 479px) {
   .list-compani__logo {
-    max-width: 480px;
+    width: calc((100% - 30px) / 1);
+  }
+}
+@media screen and (min-width: 480px) {
+  .list-compani__logo {
+    width: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 768px) {
   .list-compani__logo {
-    max-width: 226px;
+    width: calc((100% - 60px) / 3);
   }
 }
 @media screen and (min-width: 1200px) {
   .list-compani__logo {
-    max-width: 170px;
+    width: calc((100% - 90px) / 4);
   }
 }
 .list-compani__link {
@@ -1191,8 +1184,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  height: 100%;
+  height: 92px;
   border-radius: 4px;
   border: 1px solid #AFB1B8;
   fill: #AFB1B8;
@@ -1274,7 +1266,7 @@ img {
 }
 .contact-information__link {
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;

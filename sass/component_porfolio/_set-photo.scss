@@ -1,24 +1,31 @@
 .list-photo {
     display: flex;
     flex-direction: column;
-    gap: 30px;
 
     list-style: none;
     @media screen and (min-width: 768px) {
         flex-wrap: wrap;
         flex-direction: inherit;
+
+        margin: -30px 0 0 -30px;
     }
 
     &__item {
-        max-width: 450px;
-        width: 100%;
         border: 1px solid rgba(238, 238, 238, 1);
-    
+
         @media screen and (min-width: 768px) {
-            max-width: 354px;
+            margin: 30px 0 0 30px;
+            width: calc((100% - 60px) / 2);
         }
+
         @media screen and (min-width: 1200px) {
-            max-width: 370px;
+            width: calc((100% - 180px) / 3);
+        }
+    }
+    
+    @media screen and (max-width:767px) {
+        &__item + &__item {
+            margin-top: 30px;
         }
     }
 

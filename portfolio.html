@@ -8,103 +8,102 @@
     <title>Web Studio</title>
   </head>
   <body>
-    <!--header!!!!-->
     <header class="page-header">
-      <!-- Navigator -->
-      <nav class="nav">
-        <a class="nav__link" href="/index.html"
-          >Web<span class="nav__studio">Studio</span></a
-        >
-        <button
-          type="button"
-          class="menu-open js-open-menu"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <svg width="24" height="16">
-            <use href="./images/icon/symbol-defs_2.svg#icon-menu_24px"></use>
-          </svg>
-        </button>
-        <div class="menu-container js-menu-container" id="mobile-menu">
-          <button class="menu-toggle js-close-menu">
-            <svg class="menu-toggle__icon-close" width="18" height="18">
-              <use
-                class="menu-toggle__icon-close--use"
-                href="./images/icon/symbol-defs_2.svg#icon-close"
-              ></use>
+      <div class="container">
+        <!-- Navigator -->
+        <nav class="nav">
+          <a class="nav__link" href="/index.html"
+            >Web<span class="nav__studio">Studio</span></a
+          >
+          <button
+            type="button"
+            class="menu-open js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg width="24" height="16">
+              <use href="./images/icon/symbol-defs_2.svg#icon-menu_24px"></use>
             </svg>
           </button>
-          <ul class="mobile-menu">
-            <li class="mobile-menu__item">
-              <a class="mobile-menu__link" href="./index.html">Студія </a>
+          <div class="menu-container js-menu-container" id="mobile-menu">
+            <button class="menu-toggle js-close-menu">
+              <svg class="menu-toggle__icon-close" width="18" height="18">
+                <use
+                  class="menu-toggle__icon-close--use"
+                  href="./images/icon/symbol-defs_2.svg#icon-close"
+                ></use>
+              </svg>
+            </button>
+            <ul class="mobile-menu">
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="./index.html">Студія</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="./portfolio.html">Порфоліо</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">Контакти</a>
+              </li>
+            </ul>
+            <div class="mobile-contact">
+              <a class="mobile-contact__tel" href="tel:+3809999999"
+                >+3809999999</a
+              >
+              <a class="mobile-contact__mail" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </div>
+            <ul class="social">
+              <li class="social__network">
+                <a class="social__name" href="#">Instagram&nbsp;</a>
+              </li>
+              <li class="social__network">
+                <a class="social__name" href="#">&nbsp;Twitter&nbsp;</a>
+              </li>
+              <li class="social__network">
+                <a class="social__name" href="#">&nbsp;Facebook &nbsp;</a>
+              </li>
+              <li class="social__network">
+                <a class="social__name" href="#">&nbsp;LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+          <!--List Navigator-->
+          <ul class="list">
+            <li class="list__item">
+              <a class="list__link" href="./index.html">Студия</a>
             </li>
-            <li class="mobile-menu__item">
-              <a class="mobile-menu__link" href="./portfolio.html"> Порфоліо</a>
+            <li class="list__item">
+              <a class="list__link list__card" href="./portfolio.html">Портфоліо</a>
             </li>
-            <li class="mobile-menu__item">
-              <a class="mobile-menu__link" href="#"> Контакти</a>
+            <li class="list__item">
+              <a class="list__link" href="#">Контакти</a>
             </li>
           </ul>
-          <div class="mobile-contact">
-            <a class="mobile-contact__tel" href="tel:+3809999999"
-              >+3809999999</a
+          <!--CONTACTS-->
+          <div class="contacts">
+            <a class="contacts__link" href="mailto:info@devstudio.com">
+              <svg class="contacts__mail" width="16" height="12">
+                <use
+                  href="images/icon/symbol-defs_2.svg#icon-envelope-hover"
+                ></use>
+              </svg>
+              info@devstudio.com</a
             >
-            <a class="mobile-contact__mail" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
+            <a class="contacts__link" href="tel:+380961111111">
+              <svg class="contacts__tel" width="10" height="16">
+                <use href="./images/icon/symbol-defs_2.svg#icon-smartphone"></use>
+              </svg>
+              +38 (096) 111 11 11</a
             >
           </div>
-          <ul class="social">
-            <li class="social__network">
-              <a class="social__name" href="#">Instagram &nbsp</a>
-            </li>
-            <li class="social__network">
-              <a class="social__name" href="#">&nbsp Twitter &nbsp</a>
-            </li>
-            <li class="social__network">
-              <a class="social__name" href="#">&nbsp Facebook &nbsp</a>
-            </li>
-            <li class="social__network">
-              <a class="social__name" href="#">&nbsp LinkedIn</a>
-            </li>
-          </ul>
-        </div>
-        <!--List Navigator-->
-        <ul class="list">
-          <li class="list__item">
-            <a class="list__link" href="./index.html">Студия</a>
-          </li>
-          <li class="list__item">
-            <a class="list__link list__card" href="./portfolio.html"
-              >Портфоліо</a
-            >
-          </li>
-          <li class="list__item">
-            <a class="list__link" href="#">Контакти</a>
-          </li>
-        </ul>
-        <!--CONTACTS-->
-        <div class="contacts">
-          <a class="contacts__link" href="mailto:info@devstudio.com">
-            <svg class="contacts__mail" width="16" height="12">
-              <use
-                href="images/icon/symbol-defs_2.svg#icon-envelope-hover"
-              ></use>
-            </svg>
-            info@devstudio.com</a
-          >
-          <a class="contacts__link" href="tel:+380961111111">
-            <svg class="contacts__tel" width="10" height="16">
-              <use href="./images/icon/symbol-defs_2.svg#icon-smartphone"></use>
-            </svg>
-            +38 (096) 111 11 11</a
-          >
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
     <!--Overlay -->
     <!-- MAIN-->
     <main class="main">
-      <section class="main__content">
+      <section class=" container main__content">
         <!-- BUTTON MAIN -->
         <ul class="list-button">
           <li>
@@ -130,29 +129,10 @@
             <a href="#">
               <div class="list-photo__content">
                 <picture>
-                  <source
-                    srcset="
-                      ./images/porfolio-set/desktop.jpg    1x,
-                      ./images/porfolio-set/desktop-2x.jpg 2x
-                    "
-                    media="(min-width: 1200px)"
-                  />
-                  <source
-                    srcset="
-                      ./images/porfolio-set/tablet.jpg    1x,
-                      ./images/porfolio-set/tablet-2x.jpg 2x
-                    "
-                    media="(min-width: 768px)"
-                  />
-                  <source
-                    srcset="
-                      ./images/porfolio-set/mobile.jpg    1x,
-                      ./images/porfolio-set/mobile-2x.jpg 2x
-                    "
-                    media="(max-width: 767px)"
-                  />
-
-                  <img src="./images/porfolio-set/mobile.jpg" alt="Технокряк"
+                  <source srcset="./images/porfolio-set/imgset-desktop-S-min.jpg 1x ,./images/porfolio-set/img@2x-set-desktop-L-min.jpg 2x" media="(min-width: 1200px)"/>
+                  <source srcset="./images/porfolio-set/tablet/imgtablet-S-min.jpg 1x ,./images/porfolio-set/tablet/img@2x-tablet-L-min.jpg 2x" media="(min-width: 768px)"/>
+                  <source srcset="./images/porfolio-set/mobile/imgmobile-S-set-min.jpg 1x ,./images/porfolio-set/mobile/img@2xmobile-L-min.jpg 2x" media="(max-width: 767px)"/> 
+                  <img src="./images/porfolio-set/mobile/imgmobile-S-set-min.jpg" alt="PORTFOLIO">
                 </picture>
                 <p class="list-photo__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -170,32 +150,10 @@
             <a href="#">
               <div class="list-photo__content">
                 <picture>
-                  <source
-                    srcset="
-                      ./images/porfolio-set/desktop2.jpg    1x,
-                      ./images/porfolio-set/desktop2-2x.jpg 2x
-                    "
-                    media="(min-width: 1200px)"
-                  />
-                  <source
-                    srcset="
-                      ./images/porfolio-set/tablet2.jpg    1x,
-                      ./images/porfolio-set/tablet2-2x.jpg 2x
-                    "
-                    media="(min-width: 768px)"
-                  />
-                  <source
-                    srcset="
-                      ./images/porfolio-set/mobile2.jpg     1x,
-                      ./images/porfolio-set/mobile2-2x-.jpg 2x
-                    "
-                    media="(max-width: 767px)"
-                  />
-
-                  <img
-                    src="./images/porfolio-set/mobile2.jpg"
-                    alt="Технокряк"
-                  />
+                  <source srcset="./images/porfolio-set/imgset-desktop-S-1-min.jpg 1x ,./images/porfolio-set/img@2x-set-desktop-L-1-min.jpg 2x" media="(min-width: 1200px)"/>
+                  <source srcset="./images/porfolio-set/tablet/imgtablet-S-1-min.jpg 1x ,./images/porfolio-set/tablet/img@2x-tablet-L-1-min.jpg 2x" media="(min-width: 768px)"/>
+                  <source srcset="./images/porfolio-set/mobile/imgmobile-S-set-1-min.jpg 1x ,./images/porfolio-set/mobile/img@2xmobile-L-1-min.jpg 2x" media="(max-width: 767px)"/> 
+                  <img src="./images/porfolio-set/mobile/imgmobile-S-set-1-min.jpg" alt="PORTFOLIO">
                 </picture>
                 <p class="list-photo__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -215,32 +173,10 @@
             <a href="#">
               <div class="list-photo__content">
                 <picture>
-                  <source
-                    srcset="
-                      ./images/porfolio-set/desktop3.jpg     1x,
-                      ./images/porfolio-set/desktop3x-2x.jpg 2x
-                    "
-                    media="(min-width: 1200px)"
-                  />
-                  <source
-                    srcset="
-                      ./images/porfolio-set/tablet3.jpg    1x,
-                      ./images/porfolio-set/tablet3-2x.jpg 2x
-                    "
-                    media="(min-width: 768px)"
-                  />
-                  <source
-                    srcset="
-                      ./images/porfolio-set/mobile3.jpg    1x,
-                      ./images/porfolio-set/mobile3-2x.jpg 2x
-                    "
-                    media="(max-width: 767px)"
-                  />
-
-                  <img
-                    src="./images/porfolio-set/mobile3.jpg"
-                    alt="Технокряк"
-                  />
+                  <source srcset="./images/porfolio-set/imgset-desktop-S-2-min.jpg 1x ,./images/porfolio-set/img@2x-set-desktop-L-2-min.jpg 2x" media="(min-width: 1200px)"/>
+                  <source srcset="./images/porfolio-set/tablet/imgtablet-S-2-min.jpg 1x ,./images/porfolio-set/tablet/img@2x-tablet-L-2-min.jpg 2x" media="(min-width: 768px)"/>
+                  <source srcset="./images/porfolio-set/mobile/imgmobile-S-set-2-min.jpg 1x ,./images/porfolio-set/mobile/img@2xmobile-L-2-min.jpg 2x" media="(max-width: 767px)"/> 
+                  <img src="./images/porfolio-set/mobile/imgmobile-S-set-2-min.jpg" alt="PORTFOLIO">
                 </picture>
                 <p class="list-photo__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -258,32 +194,10 @@
             <a href="#">
               <div class="list-photo__content">
                 <picture>
-                  <source
-                    srcset="
-                      ./images/porfolio-set/desktop4.jpg    1x,
-                      ./images/porfolio-set/desktop4-2x.jpg 2x
-                    "
-                    media="(min-width: 1200px)"
-                  />
-                  <source
-                    srcset="
-                      ./images/porfolio-set/tablet4.jpg    1x,
-                      ./images/porfolio-set/tablet4-2x.jpg 2x
-                    "
-                    media="(min-width: 768px)"
-                  />
-                  <source
-                    srcset="
-                      ./images/porfolio-set/mobile4.jpg    1x,
-                      ./images/porfolio-set/mobile4-2x.jpg 2x
-                    "
-                    media="(max-width: 767px)"
-                  />
-
-                  <img
-                    src="./images/porfolio-set/mobile4.jpg"
-                    alt="Технокряк"
-                  />
+                  <source srcset="./images/porfolio-set/imgset-desktop-S-3-min.jpg 1x ,./images/porfolio-set/img@2x-set-desktop-L-3-min.jpg 2x" media="(min-width: 1200px)"/>
+                  <source srcset="./images/porfolio-set/tablet/imgtablet-S-3-min.jpg 1x ,./images/porfolio-set/tablet/img@2x-tablet-L-3-min.jpg 2x" media="(min-width: 768px)"/>
+                  <source srcset="./images/porfolio-set/mobile/imgmobile-S-set-3-min.jpg 1x ,./images/porfolio-set/mobile/img@2xmobile-L-3-min.jpg 2x" media="(max-width: 767px)"/> 
+                  <img src="./images/porfolio-set/mobile/imgmobile-S-set-3-min.jpg" alt="PORTFOLIO">
                 </picture>
                 <p class="list-photo__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -301,32 +215,10 @@
             <a href="#">
               <div class="list-photo__content">
                 <picture>
-                  <source
-                    srcset="
-                      ./images/porfolio-set/desktop5.jpg    1x,
-                      ./images/porfolio-set/desktop5-2x.jpg 2x
-                    "
-                    media="(min-width: 1200px)"
-                  />
-                  <source
-                    srcset="
-                      ./images/porfolio-set/tablet.jpg     1x,
-                      ./images/porfolio-set/tablet5-2x.jpg 2x
-                    "
-                    media="(min-width: 768px)"
-                  />
-                  <source
-                    srcset="
-                      ./images/porfolio-set/mobile5.jpg    1x,
-                      ./images/porfolio-set/mobile5-2x.jpg 2x
-                    "
-                    media="(max-width: 767px)"
-                  />
-
-                  <img
-                    src="./images/porfolio-set/mobile5.jpg"
-                    alt="Технокряк"
-                  />
+                  <source srcset="./images/porfolio-set/imgset-desktop-S-4-min.jpg 1x ,./images/porfolio-set/img@2x-set-desktop-L-4-min.jpg 2x" media="(min-width: 1200px)"/>
+                  <source srcset="./images/porfolio-set/tablet/imgtablet-S-4-min.jpg 1x ,./images/porfolio-set/tablet/img@2x-tablet-L-4-min.jpg 2x" media="(min-width: 768px)"/>
+                  <source srcset="./images/porfolio-set/mobile/imgmobile-S-set-4-min.jpg 1x ,./images/porfolio-set/mobile/img@2xmobile-L-4-min.jpg 2x" media="(max-width: 767px)"/> 
+                  <img src="./images/porfolio-set/mobile/imgmobile-S-set-4-min.jpg" alt="PORTFOLIO">
                 </picture>
                 <p class="list-photo__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -344,33 +236,12 @@
             <a href="#">
               <div class="list-photo__content">
                 <picture>
-                  <source
-                    srcset="
-                      ./images/porfolio-set/desktop6.jpg   1x,
-                      ./images/porfolio-set/desktop6-2xjpg 2x
-                    "
-                    media="(min-width: 1200px)"
-                  />
-                  <source
-                    srcset="
-                      ./images/porfolio-set/tablet6.jpg    1x,
-                      ./images/porfolio-set/tablet6-2x.jpg 2x
-                    "
-                    media="(min-width: 768px)"
-                  />
-                  <source
-                    srcset="
-                      ./images/porfolio-set/mobile6.jpg    1x,
-                      ./images/porfolio-set/mobile6-2x.jpg 2x
-                    "
-                    media="(max-width: 767px)"
-                  />
-
-                  <img
-                    src="./images/porfolio-set/mobile6.jpg"
-                    alt="Технокряк"
-                  />
-                </picture>
+                  <picture>
+                    <source srcset="./images/porfolio-set/imgset-desktop-S-5-min.jpg 1x ,./images/porfolio-set/img@2x-set-desktop-L-5-min.jpg 2x" media="(min-width: 1200px)"/>
+                    <source srcset="./images/porfolio-set/tablet/imgtablet-S-5-min.jpg 1x ,./images/porfolio-set/tablet/img@2x-tablet-L-5-min.jpg 2x" media="(min-width: 768px)"/>
+                    <source srcset="./images/porfolio-set/mobile/imgmobile-S-set-5-min.jpg 1x ,./images/porfolio-set/mobile/img@2xmobile-L-5-min.jpg 2x" media="(max-width: 767px)"/> 
+                    <img src="./images/porfolio-set/mobile/imgmobile-S-set-5-min.jpg" alt="PORTFOLIO">
+                  </picture>
                 <p class="list-photo__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -387,33 +258,12 @@
             <a href="#">
               <div class="list-photo__content">
                 <picture>
-                  <source
-                    srcset="
-                      ./images/porfolio-set/desktop7.jpg    1x,
-                      ./images/porfolio-set/desktop7-2x.jpg 2x
-                    "
-                    media="(min-width: 1200px)"
-                  />
-                  <source
-                    srcset="
-                      ./images/porfolio-set/tablet7.jpg    1x,
-                      ./images/porfolio-set/tablet7-2x.jpg 2x
-                    "
-                    media="(min-width: 768px)"
-                  />
-                  <source
-                    srcset="
-                      ./images/porfolio-set/mobile7.jpg    1x,
-                      ./images/porfolio-set/mobile7-2x.jpg 2x
-                    "
-                    media="(max-width: 767px)"
-                  />
-
-                  <img
-                    src="./images/porfolio-set/mobile7.jpg"
-                    alt="Технокряк"
-                  />
-                </picture>
+                  <picture>
+                    <source srcset="./images/porfolio-set/imgset-desktop-S-6-min.jpg 1x ,./images/porfolio-set/img@2x-set-desktop-L-6-min.jpg 2x" media="(min-width: 1200px)"/>
+                    <source srcset="./images/porfolio-set/tablet/imgtablet-S-6-min.jpg 1x ,./images/porfolio-set/tablet/img@2x-tablet-L-6-min.jpg 2x" media="(min-width: 768px)"/>
+                    <source srcset="./images/porfolio-set/mobile/imgmobile-S-set-6-min.jpg 1x ,./images/porfolio-set/mobile/img@2xmobile-L-6-min.jpg 2x" media="(max-width: 767px)"/> 
+                    <img src="./images/porfolio-set/mobile/imgmobile-S-set-6-min.jpg" alt="PORTFOLIO">
+                  </picture>
                 <p class="list-photo__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -430,32 +280,10 @@
             <a href="#">
               <div class="list-photo__content">
                 <picture>
-                  <source
-                    srcset="
-                      ./images/porfolio-set/desktop8.jpg    1x,
-                      ./images/porfolio-set/desktop8-2x.jpg 2x
-                    "
-                    media="(min-width: 1200px)"
-                  />
-                  <source
-                    srcset="
-                      ./images/porfolio-set/tablet8.jpg    1x,
-                      ./images/porfolio-set/tablet8-2x.jpg 2x
-                    "
-                    media="(min-width: 768px)"
-                  />
-                  <source
-                    srcset="
-                      ./images/porfolio-set/mobile8.jpg    1x,
-                      ./images/porfolio-set/mobile8-2x.jpg 2x
-                    "
-                    media="(max-width: 767px)"
-                  />
-
-                  <img
-                    src="./images/porfolio-set/mobile8.jpg"
-                    alt="Технокряк"
-                  />
+                  <source srcset="./images/porfolio-set/imgset-desktop-S-7-min.jpg 1x ,./images/porfolio-set/img@2x-set-desktop-L-7-min.jpg 2x" media="(min-width: 1200px)"/>
+                  <source srcset="./images/porfolio-set/tablet/imgtablet-S-7-min.jpg 1x ,./images/porfolio-set/tablet/img@2x-tablet-L-7-min.jpg 2x" media="(min-width: 768px)"/>
+                  <source srcset="./images/porfolio-set/mobile/imgmobile-S-set-7-min.jpg 1x ,./images/porfolio-set/mobile/img@2xmobile-L-7-min.jpg 2x" media="(max-width: 767px)"/> 
+                  <img src="./images/porfolio-set/mobile/imgmobile-S-set-7-min.jpg" alt="PORTFOLIO">
                 </picture>
                 <p class="list-photo__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -473,33 +301,12 @@
             <a href="#">
               <div class="list-photo__content">
                 <picture>
-                  <source
-                    srcset="
-                      ./images/porfolio-set/desktop9.jpg    1x,
-                      ./images/porfolio-set/desktop9-2x.jpg 2x
-                    "
-                    media="(min-width: 1200px)"
-                  />
-                  <source
-                    srcset="
-                      ./images/porfolio-set/tablet9.jpg    1x,
-                      ./images/porfolio-set/tablet9-2x.jpg 2x
-                    "
-                    media="(min-width: 768px)"
-                  />
-                  <source
-                    srcset="
-                      ./images/porfolio-set/mobile9.jpg    1x,
-                      ./images/porfolio-set/mobile9-2x.jpg 2x
-                    "
-                    media="(max-width: 767px)"
-                  />
-
-                  <img
-                    src="./images/porfolio-set/mobile9.jpg"
-                    alt="Технокряк"
-                  />
-                </picture>
+                  <picture>
+                    <source srcset="./images/porfolio-set/imgset-desktop-S-8-min.jpg 1x ,./images/porfolio-set/img@2x-set-desktop-L-8-min.jpg 2x" media="(min-width: 1200px)"/>
+                    <source srcset="./images/porfolio-set/tablet/imgtablet-S-8-min.jpg 1x ,./images/porfolio-set/tablet/img@2x-tablet-L-8-min.jpg 2x" media="(min-width: 768px)"/>
+                    <source srcset="./images/porfolio-set/mobile/imgmobile-S-set-8-min.jpg 1x ,./images/porfolio-set/mobile/img@2xmobile-L-8-min.jpg 2x" media="(max-width: 767px)"/> 
+                    <img src="./images/porfolio-set/mobile/imgmobile-S-set-8-min.jpg" alt="PORTFOLIO">
+                  </picture>
                 <p class="list-photo__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -517,7 +324,7 @@
     </main>
     <!-- FOOTER  (Дно) -->
     <footer class="footer">
-      <div class="footer-contain">
+      <div class="container footer-contain">
         <div class="contact-information">
           <a class="contact-information__link" href="WebStudio"
             >Web<span class="contact-information__web">Studio</span></a
@@ -536,36 +343,36 @@
         <div class="join">
           <p class="join-text">ПРИЄДНУЙТЕСЬ</p>
           <ul class="list-footer">
-            <li class="list-footer__item">
+            <li>
               <a class="list-footer__link" href="#">
-                <svg class="list-footer__svg" width="20" height="20">
+                <svg width="20" height="20">
                   <use
                     href="./images/icon/symbol-defs_2.svg#icon-instagram"
                   ></use>
                 </svg>
               </a>
             </li>
-            <li class="list-footer__item">
+            <li>
               <a class="list-footer__link" href="#">
-                <svg class="list-footer__svg" width="20" height="20">
+                <svg width="20" height="20">
                   <use
                     href="./images/icon/symbol-defs_2.svg#icon-twitter"
                   ></use>
                 </svg>
               </a>
             </li>
-            <li class="list-footer__item">
+            <li>
               <a class="list-footer__link" href="#">
-                <svg class="list-footer__svg" width="20" height="20">
+                <svg width="20" height="20">
                   <use
                     href="./images/icon/symbol-defs_2.svg#icon-facebook"
                   ></use>
                 </svg>
               </a>
             </li>
-            <li class="list-footer__item">
+            <li>
               <a class="list-footer__link" href="#">
-                <svg class="list-footer__svg" width="20" height="20">
+                <svg width="20" height="20">
                   <use
                     href="./images/icon/symbol-defs_2.svg#icon-linkedin"
                   ></use>

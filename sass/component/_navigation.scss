@@ -3,8 +3,7 @@
   align-items: baseline;
 
   max-width: 480px;
-  @extend %container;
-
+  
   @media screen and (min-width: 768px) {
     align-items: center;
     max-width: 768px;

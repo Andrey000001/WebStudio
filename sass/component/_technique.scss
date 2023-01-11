@@ -1,13 +1,10 @@
 .cards-addition {
-  @extend %container;
-
   @media screen and (max-width: 1199px) {
     display: none;
   }
 
   @media screen and (min-width: 1200px) {
     padding-bottom: 94px;
-    max-width: 1200px;
   }
 
   &__subtitle {
@@ -21,14 +18,19 @@
     letter-spacing: 0.03em;
 
     color: $textcolor;
+    
+    @media screen and (max-width: 767px) {
+      font-size: 28px
+    }
   }
 }
 
 .list-product {
+  gap: 30px;
+
   @media screen and (min-width: 1200px) {
     display: flex;
     list-style: none;
-    gap: 30px;
   }
 
   &__item {

@@ -58,10 +58,10 @@
   background-color: $primarycolor;
   cursor: pointer;
 
-  &__icon-close:hover {
+  &:focus &__icon-close ,
+  &:hover &__icon-close {
     fill: $hovercolor;
   }
-
 }
 
 .mobile-menu {
@@ -111,6 +111,7 @@
     font-size: 24px;
     line-height: 1.16;
     letter-spacing: 0.02em;
+    text-decoration: none;
 
     margin: 0 0 64px 0;
     color: $textprimary;

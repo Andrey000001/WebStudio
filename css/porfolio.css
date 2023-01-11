@@ -352,7 +352,7 @@ html {
   list-style: none;
 }
 
-.footer-contain, .main__content, .nav, .container {
+.container {
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -378,7 +378,7 @@ body.modal-open {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -642,7 +642,7 @@ img {
   background-color: #FFF;
   cursor: pointer;
 }
-.menu-toggle__icon-close:hover {
+.menu-toggle:focus .menu-toggle__icon-close, .menu-toggle:hover .menu-toggle__icon-close {
   fill: #2196F3;
 }
 
@@ -696,6 +696,7 @@ img {
   font-size: 24px;
   line-height: 1.16;
   letter-spacing: 0.02em;
+  text-decoration: none;
   margin: 0 0 64px 0;
   color: #757575;
 }
@@ -725,16 +726,10 @@ img {
 .main__content {
   padding-top: 60px;
   padding-bottom: 60px;
-  max-width: 480px;
-}
-@media screen and (min-width: 768px) {
-  .main__content {
-    max-width: 768px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .main__content {
-    max-width: 1200px;
+    padding: 94px 0;
   }
 }
 
@@ -756,6 +751,11 @@ img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .list-button {
+    margin-bottom: 48px;
   }
 }
 .list-button__button {
@@ -788,7 +788,6 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 30px;
   list-style: none;
 }
 @media screen and (min-width: 768px) {
@@ -799,21 +798,26 @@ img {
     -webkit-box-direction: inherit;
         -ms-flex-direction: inherit;
             flex-direction: inherit;
+    margin: -30px 0 0 -30px;
   }
 }
 .list-photo__item {
-  max-width: 450px;
-  width: 100%;
   border: 1px solid rgb(238, 238, 238);
 }
 @media screen and (min-width: 768px) {
   .list-photo__item {
-    max-width: 354px;
+    margin: 30px 0 0 30px;
+    width: calc((100% - 60px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
   .list-photo__item {
-    max-width: 370px;
+    width: calc((100% - 180px) / 3);
+  }
+}
+@media screen and (max-width: 767px) {
+  .list-photo__item + .list-photo__item {
+    margin-top: 30px;
   }
 }
 .list-photo__item:hover, .list-photo__item:focus {
@@ -943,7 +947,7 @@ img {
 }
 .contact-information__link {
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
