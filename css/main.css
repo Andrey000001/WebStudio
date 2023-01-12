@@ -896,19 +896,19 @@ img {
   margin-bottom: 0;
 }
 .list-skills--antenna::before {
-  background-image: url(../../images/icon/svg/antenna.svg);
+  background-image: url(../images/icon/svg/antenna.svg);
   background-size: 65.32px 70px;
 }
 .list-skills--clock::before {
-  background-image: url(../../images/icon/svg/clock.svg);
+  background-image: url(../images/icon/svg/clock.svg);
   background-size: 66.96px 70px;
 }
 .list-skills--diagram::before {
-  background-image: url(../../images/icon/svg/diagram.svg);
+  background-image: url(../images/icon/svg/diagram.svg);
   background-size: 53.69px 70px;
 }
 .list-skills--astronaut::before {
-  background-image: url(../../images/icon/svg/astronaut.svg);
+  background-image: url(../images/icon/svg/astronaut.svg);
   background-size: 70px 70px;
 }
 .list-skills__logo {

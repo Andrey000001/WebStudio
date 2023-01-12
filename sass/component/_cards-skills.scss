@@ -66,22 +66,22 @@
   }
 
   &--antenna::before {
-    background-image: url(../../images/icon/svg/antenna.svg);
+    background-image: url(../images/icon/svg/antenna.svg);
     @extend %background-images;
     background-size: 65.32px 70px;
   }
   &--clock::before {
-    background-image: url(../../images/icon/svg/clock.svg);
+    background-image: url(../images/icon/svg/clock.svg);
     @extend %background-images;
     background-size: 66.96px 70px;
   }
   &--diagram::before {
-    background-image: url(../../images/icon/svg/diagram.svg);
+    background-image: url(../images/icon/svg/diagram.svg);
     @extend %background-images;
     background-size: 53.69px 70px;
   }
   &--astronaut::before {
-    background-image: url(../../images/icon/svg/astronaut.svg);
+    background-image: url(../images/icon/svg/astronaut.svg);
     @extend %background-images;
     background-size: 70px 70px;
   }
