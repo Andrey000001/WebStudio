@@ -569,6 +569,11 @@ img {
     margin: 0;
   }
 }
+@media screen and (max-width: 1199px) {
+  .contacts__link {
+    font-size: 12px;
+  }
+}
 .contacts__link:hover, .contacts__link:focus {
   color: #2196F3;
 }
@@ -729,10 +734,7 @@ img {
 }
 
 .overlay {
-  padding-bottom: 118px;
-  padding-top: 118px;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding: 118px 0;
   margin: auto;
   max-width: 480px;
   height: 400px;
@@ -741,6 +743,11 @@ img {
   background-color: #2f303a;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/overley/imghero-s-min.jpg");
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/overley/imghero-s-min.jpg");
+}
+@media screen and (min-width: 1200px) {
+  .overlay {
+    padding: 200px 0;
+  }
 }
 .overlay__title {
   text-align: center;
@@ -757,6 +764,7 @@ img {
   .overlay__title {
     font-size: 44px;
     max-width: 696px;
+    line-height: 1.36;
   }
 }
 .overlay__button {
@@ -979,9 +987,10 @@ img {
   letter-spacing: 0.03em;
   color: #212121;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .cards-addition__subtitle {
     font-size: 28px;
+    margin-bottom: 30px;
   }
 }
 

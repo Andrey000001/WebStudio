@@ -1,8 +1,5 @@
 .overlay {
-  padding-bottom: 118px;
-  padding-top: 118px;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding: 118px 0;
   margin: auto;
 
   max-width: 480px;
@@ -18,6 +15,9 @@
       rgba(47, 48, 58, 0.4)
     ),
   url("../images/overley/imghero-s-min.jpg");
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0;
+  }
 
   &__title {
     text-align: center;
@@ -35,6 +35,7 @@
     @media screen and (min-width: 1200px) {
       font-size: 44px;
       max-width: 696px;
+      line-height: 1.36;
     }
   }
 
