@@ -27,7 +27,7 @@
 }
 
 .list-product {
-  gap: 30px;
+  margin: -30px 0 0 -30px;
 
   @media screen and (min-width: 1200px) {
     display: flex;
@@ -37,8 +37,9 @@
   &__item {
     position: relative;
     justify-content: center;
-    max-width: 370px;
-    height: 294px;
+    margin: 30px 0 0 30px;
+    width: calc((100% - 60px) / 3);
+    
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
   
@@ -49,7 +50,7 @@
     bottom: 0;
     width: 100%;
     padding-top: 70px;
- 
+   
     background: rgba(47, 48, 58, 0.8);
   }
   
